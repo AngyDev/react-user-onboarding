@@ -13,8 +13,8 @@ import React from "react";
 
 export default function Logo() {
     return(
-        <div>
-            <img src="./images/logo.svg" alt="Logo"/>
+        <div className="logo__container">
+            <img className="logo__img" src="./images/logo.svg" alt="Logo"/>
         </div>
     )
 }
