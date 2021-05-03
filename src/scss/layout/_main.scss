@@ -1,0 +1,13 @@
+.main {
+    &__container {
+        width: 100%;
+    }
+}
+
+@include desktop {
+    .main {
+        &__container {
+            width: 70%;
+        }
+    }
+}
