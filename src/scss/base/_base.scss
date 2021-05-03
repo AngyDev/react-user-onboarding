@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.app-container {
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
