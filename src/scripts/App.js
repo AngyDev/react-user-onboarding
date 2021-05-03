@@ -1,12 +1,13 @@
 import React from "react";
-import Logo from "./components/Logo";
+import Sidebar from "./components/Sidebar";
+import Main from "./components/Main";
 
 export default class App extends React.Component {
     render() {
-        return(
-            <div>
-                <Logo />                
-                <h1 style={{fontFamily: "Montserrat Alternates"}}>Hello World</h1>
+        return (
+            <div className="app-container">
+                <Sidebar />
+                <Main />
             </div>
         )
     }
