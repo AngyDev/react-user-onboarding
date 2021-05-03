@@ -1,0 +1,15 @@
+.sidebar {
+    background-color: $sidebar-color;
+    &__container {
+        padding: 20px 40px;
+        width: 100%;
+    }
+}
+@include desktop {
+    .sidebar {
+        &__container {
+            padding: 20px 40px;
+            width: 30%;
+        }
+    }
+}
