@@ -7,3 +7,9 @@
     font-family: Montserrat;
     src: url("/src/fonts/Montserrat-Regular.ttf");
 }
+
+.font__sm {
+    font-family: $font-montserrat-alternates;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-sm;
+}
