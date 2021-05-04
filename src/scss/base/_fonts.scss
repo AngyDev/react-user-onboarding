@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Montserrat Alternates';
+    font-family: "Montserrat Alternates";
     src: url("/src/fonts/MontserratAlternates-Regular.ttf");
 }
 
@@ -12,4 +12,16 @@
     font-family: $font-montserrat-alternates;
     font-weight: $font-weight-bold;
     font-size: $font-size-sm;
+}
+
+.font__mont-base {
+    font-family: $font-monserrat;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+}
+
+.font__mont-alt-base {
+    font-family: $font-montserrat-alternates;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-base;
 }
