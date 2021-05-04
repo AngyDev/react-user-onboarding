@@ -14,7 +14,7 @@ import React from "react";
 export default function Logo() {
     return(
         <div className="logo__container">
-            <img className="logo__img" src="./images/logo.svg" alt="Logo"/>
+            <img className="logo__img" src="./images/sidebar/logo.svg" alt="Logo"/>
         </div>
     )
 }
