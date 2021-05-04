@@ -1,0 +1,45 @@
+.checklist {
+    list-style-type: none;
+    padding: 0;
+    @extend .font__sm;
+    color: $white;
+    .checkbox {
+        &__container {
+            width: 28px;
+            display: inline-block;
+            margin-right: 6px;
+        }
+        &__border {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            border: 3px solid $white;
+            border-radius: 4px;
+            position: relative;
+            display: grid;
+            place-items: center;
+            margin: 2px 0;
+        }
+        &__box {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: $white;
+            border-radius: 2px;
+        }
+    }
+    &__line {
+        width: 4px;
+        height: 9px;
+        display: block;
+        background: $white;
+        border-radius: 1px;
+        margin: 6px 12px;
+    }
+    li{
+        opacity: 0.5;
+        &.active{
+            opacity: 1;
+        }
+    }
+}
