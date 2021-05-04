@@ -1,0 +1,7 @@
+.spacing {
+    margin: 0;
+    border: 0;
+    &--sm {
+        padding-bottom: $spacer-base * 6;
+    }
+}
