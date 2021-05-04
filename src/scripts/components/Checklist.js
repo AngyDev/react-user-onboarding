@@ -8,6 +8,7 @@ export default function Checklist() {
             <ul className="checklist">
                 { stepTitles.map((title, i) => <ChecklistItem key={i} stepTitle={title} lastTitle = {stepTitles.length === i+1}/>) }
             </ul>
+            <hr className="spacing spacing--sm"></hr>
         </div>
     )
 }
