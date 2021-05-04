@@ -1,0 +1,43 @@
+.quote {
+    margin-bottom: 32px;
+    max-width: 360px;
+    margin-left: 17px;
+    &__container {
+        background: $white;
+        box-shadow: 0px 8px 20px rgba(3, 17, 6, 0.03);
+        border-radius: 4px;
+        position: relative;
+        background: linear-gradient(165deg, rgba(112,185,238,1) 0%, rgba(255,255,255,1) 16%);
+    }
+    &__marks {
+        width: 56px;
+        height: 56px;
+        background: $white;
+        box-shadow: 16px 12px 56px rgba(11, 29, 46, 0.15);
+        border-radius: 3px;
+        position: absolute;
+        top: -24px;
+        left: -17px;
+    }
+    &__content {
+        padding: 48px 40px 32px 40px;
+    }
+    &__text {
+        @extend .font__mont-base;
+        font-style: italic;
+        color: $quote-text-color;
+        padding-bottom: 20px;
+    }
+    .author {
+        &__name {
+            @extend .font__mont-alt-base;
+            color: $quote-author-name-color;
+        }
+        &__role {
+            @extend .font__mont-base;
+            color: $quote-text-color;
+            font-size: $font-size-xs;
+            text-transform: uppercase;
+        }
+    }
+}
