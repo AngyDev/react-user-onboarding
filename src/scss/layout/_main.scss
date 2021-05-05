@@ -1,13 +1,18 @@
 .main {
+    width: 100%;
     &__container {
-        width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 }
 
 @include desktop {
     .main {
+        width: 70%;
         &__container {
-            width: 70%;
+            padding-left: 117px;
+            padding-right: 148px;
+            background-color: yellow;
         }
     }
 }
