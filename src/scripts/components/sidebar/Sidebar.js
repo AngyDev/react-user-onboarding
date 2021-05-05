@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import Logo from "./Logo";
-import Checklist from "./Checklist";
-import Quote from "./Quote";
-import quotes from "../data/quotes.json";
-import { StepContext } from "../context/StepContext";
+import Logo from "../logo/Logo";
+import Checklist from "../checklist/Checklist";
+import Quote from "../quote/Quote";
+import quotes from "../../data/quotes.json";
+import { StepContext } from "../../context/StepContext";
 
 /**
  * Sidebar component

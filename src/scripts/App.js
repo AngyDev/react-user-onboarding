@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Sidebar from "./components/Sidebar";
-import Main from "./components/Main";
+import Sidebar from "./components/sidebar/Sidebar";
+import Main from "./components/main/Main";
 import {StepContext} from "./context/StepContext";
 
 export default function App() {
