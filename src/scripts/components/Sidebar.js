@@ -3,8 +3,12 @@ import Logo from "./Logo";
 import Checklist from "./Checklist";
 import Quote from "./Quote";
 import quotes from "../data/quotes.json";
-import {StepContext} from "../App";
+import { StepContext } from "../context/StepContext";
 
+/**
+ * Sidebar component
+ * @returns The sidebar of the app with logo, checklist of step title and the quote box
+ */
 export default function Sidebar() {
     const step = useContext(StepContext);
     return (

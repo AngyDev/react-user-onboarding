@@ -1,8 +1,12 @@
 import React, {useContext} from "react";
 import ChecklistItem from "./ChecklistItem";
 import steps from "../data/steps.json";
-import {StepContext} from "../App";
+import {StepContext} from "../context/StepContext";
 
+/**
+ * Checklist component
+ * @returns The list of the step title
+ */
 export default function Checklist() {
     const step = useContext(StepContext);
     return (

@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Main from "./components/Main";
-//import {StepProvider} from "./context/StepContext";
-
-export const StepContext = React.createContext();
+import {StepContext} from "./context/StepContext";
 
 export default function App() {
 
