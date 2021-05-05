@@ -15,7 +15,7 @@ export default function Logo() {
     return(
         <div className="logo__container">
             <img className="logo__img" src="./images/sidebar/logo.svg" alt="Logo"/>
-            <hr className="spacing spacing--sm"></hr>
+            <hr className="spacing spacing--lg"></hr>
         </div>
     )
 }

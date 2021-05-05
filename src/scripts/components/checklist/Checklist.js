@@ -14,7 +14,7 @@ export default function Checklist() {
             <ul className="checklist">
                 { steps.stepTitles.map((title, i) => <ChecklistItem key={i} stepTitle={title} lastTitle={steps.stepTitles.length === i+1} active={i+1 <= step ? true : false}/>) }
             </ul>
-            <hr className="spacing spacing--sm"></hr>
+            <hr className="spacing spacing--lg"></hr>
         </div>
     )
 }
