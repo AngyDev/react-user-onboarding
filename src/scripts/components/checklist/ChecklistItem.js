@@ -8,19 +8,19 @@ import React from "react";
 export default function ChecklistItem(props) {
     return (
         <div>
-            <li className={props.active && "active"}>
+            <li data-testid="checklist-li" className={props.active === true ? "active" : undefined}>
                 <div className="flex align-center">
                     <span className="checkbox__container">
                         <span className="checkbox__border">
                             <span className="checkbox__box"></span>
                         </span>
                     </span>
-                    <span>{props.stepTitle}</span>
+                    <span data-testid="checklist-title">{props.stepTitle}</span>
                 </div>
                 {
                     // if it is the last title doesn't show the lines
                     !props.lastTitle &&
-                    <div>
+                    <div data-testid="checklist-line">
                         <span className="checklist__line"></span>
                         <span className="checklist__line"></span>
                     </div>
