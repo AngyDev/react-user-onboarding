@@ -1,5 +1,10 @@
 import React from "react";
 
+/**
+ * Quote component
+ * @param {*} props The text, the author name and the author role
+ * @returns The quote box with text, author name and author role
+ */
 export default function Quote(props) {
     return (
         <div className="quote">
