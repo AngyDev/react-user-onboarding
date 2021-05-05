@@ -8,7 +8,7 @@ import React from "react";
 export default function ChecklistItem(props) {
     return (
         <div>
-            <li>
+            <li className={props.active && "active"}>
                 <div className="flex align-center">
                     <span className="checkbox__container">
                         <span className="checkbox__border">
