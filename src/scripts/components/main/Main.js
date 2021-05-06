@@ -4,7 +4,7 @@ import Navbar from "../navbar/Navbar";
 
 export default function Main() {
     return (
-        <div className="main flex flex-col">
+        <div data-testid="main" className="main flex flex-col">
             <hr className="spacing spacing--2"/>
             <div className="main__container flex flex-col justify-between">
                 <Header />

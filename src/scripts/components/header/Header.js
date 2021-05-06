@@ -13,7 +13,7 @@ export default function Header() {
             <div>STEP {step} OF 3</div>
             <div className="flex align-center">
                 <div>Lost or have trouble?</div>
-                <Button typeClass="link" text="Get help" arrow="left"/>
+                <Button typeClass="link" text="Get help" arrow="left" />
             </div>
         </div>
     )

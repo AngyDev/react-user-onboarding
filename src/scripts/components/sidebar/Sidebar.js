@@ -12,7 +12,7 @@ import { StepContext } from "../../context/StepContext";
 export default function Sidebar() {
     const [step] = useContext(StepContext);
     return (
-        <div className="sidebar sidebar__container flex flex-col justify-between">
+        <div data-testid="sidebar" className="sidebar sidebar__container flex flex-col justify-between">
             <Logo />
             <Checklist />
             <Quote text={quotes.quotes[step].text} authorName={quotes.quotes[step].authorName} authorRole={quotes.quotes[step].authorRole}/>
