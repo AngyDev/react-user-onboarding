@@ -13,19 +13,13 @@ describe("Header component test", () => {
      */
     function renderHeader(step) {
         return render(
-            <StepContext.Provider value={step}>
+            <StepContext.Provider value={[step]}>
                 <Header />
             </StepContext.Provider>
         );
     }
 
     afterEach(cleanup);
-
-    it("should render the total of the step", () => {
-        const { getByText } = render(<Header />);
-
-        expect(getByText(/STEP/i).textContent).toBe("STEP  OF 3");
-    });
 
     it("should render the step number empty", () => {
 
@@ -42,4 +36,10 @@ describe("Header component test", () => {
         expect(screen.getByText(`STEP ${step} OF 3`)).toBeInTheDocument();
         expect(screen.getByText(/STEP/i).textContent).toBe("STEP 1 OF 3");
     });
+
+    it("should render one button component", () => {
+        renderHeader(null);
+
+        expect(screen.queryAllByTestId("button")).toHaveLength(1);
+    })
 })
