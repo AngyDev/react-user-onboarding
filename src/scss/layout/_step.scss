@@ -1,0 +1,12 @@
+.step {
+    &__title {
+        @extend .font__mont-alt-title;
+        padding-bottom: 12px;
+    }
+    &__caption {
+        @extend .font__mont-alt-base;
+        font-weight: $font-weight-normal;
+        color: $font-base-color;
+        line-height: 24px;
+    }
+}
