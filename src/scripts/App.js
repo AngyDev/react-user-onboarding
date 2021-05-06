@@ -8,7 +8,7 @@ export default function App() {
     const [step, setStep] = useState(1);
 
     return (
-        <StepContext.Provider value={step}>
+        <StepContext.Provider value={[step, setStep]}>
             <div className="app-container">
                 <Sidebar />
                 <Main />
