@@ -1,3 +1,4 @@
 import React from "react";
 
-export const StepContext = React.createContext();
+// Added an array to test the components that use the context
+export const StepContext = React.createContext([{}, function(){}]);
