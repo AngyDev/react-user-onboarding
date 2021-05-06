@@ -8,7 +8,7 @@ import {StepContext} from "../../context/StepContext";
  * @returns The list of the step title
  */
 export default function Checklist() {
-    const step = useContext(StepContext);
+    const [step] = useContext(StepContext);
     return (
         <div name="checklist">
             <ul className="checklist">

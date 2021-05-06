@@ -10,7 +10,7 @@ import { StepContext } from "../../context/StepContext";
  * @returns The sidebar of the app with logo, checklist of step title and the quote box
  */
 export default function Sidebar() {
-    const step = useContext(StepContext);
+    const [step] = useContext(StepContext);
     return (
         <div className="sidebar sidebar__container flex flex-col justify-between">
             <Logo />
