@@ -20,10 +20,28 @@
     font-weight: $font-weight-normal;
 }
 
+.font__mont-xs {
+    font-family: $font-monserrat;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-normal;
+}
+
+.font__mont-md {
+    font-family: $font-monserrat;
+    font-size: $font-size-md;
+    font-weight: $font-weight-normal;
+}
+
 .font__mont-alt-base {
     font-family: $font-montserrat-alternates;
     font-weight: $font-weight-bold;
     font-size: $font-size-base;
+}
+
+.font__mont-alt-md {
+    font-family: $font-montserrat-alternates;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-md;
 }
 
 .font__mont-alt-title {
