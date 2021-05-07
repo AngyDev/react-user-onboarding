@@ -3,7 +3,9 @@
     "stepPage": {
         "1": {
             "title": "Contact details",
-            "caption": "Welcome to United Properties, we are glad to see you! Let’s get started by letting us know a little bit about you"
+            "caption": "Welcome to United Properties, we are glad to see you! Let’s get started by letting us know a little bit about you",
+            "privacyTitle": "Privacy policy",
+            "privacyCaption": "We know you care about how your personal information is used and shared, so we take your privacy seriously"
         },
         "2": {
             "title": "Investment preferences",
