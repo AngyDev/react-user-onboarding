@@ -12,7 +12,7 @@ export default function Header() {
         <div data-testid="header" name="header" className="header flex justify-between align-center">
             <div>STEP {step} OF 3</div>
             <div className="flex align-center">
-                <div>Lost or have trouble?</div>
+                <div style={{paddingRight:"6px"}}>Lost or have trouble?</div>
                 <Button typeClass="link" text="Get help" arrow="left" />
             </div>
         </div>

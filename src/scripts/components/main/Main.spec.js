@@ -44,6 +44,6 @@ describe("Navbar test", () => {
         renderMain(1);
 
         expect(screen.getByTestId("navbar")).toBeInTheDocument();
-    })
+    });
 
 })
