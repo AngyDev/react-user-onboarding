@@ -1,0 +1,47 @@
+.contact {
+    &__form {
+        padding-bottom: 56px;
+        .form {
+            &__item {
+                margin-bottom: 36px;
+            }
+            &__label {
+                @extend .font__mont-xs;
+                color: $font-base-color;
+                &:focus-within {
+                    color: $form-elem-focus-bg-color;
+                }
+            }
+            &__element {
+                width: 100%;
+                height: 32px;
+                border: none;
+                outline: none;
+                border-bottom: 1px solid $form-elem-bg-color;
+                @extend .font__mont-md;
+                &:focus {
+                    border-bottom: 1px solid $form-elem-focus-bg-color;
+                }
+            }
+            &__input {
+                margin-top: 4px;
+                padding: 0;
+            }
+            &__name {
+                padding-right: 20px;
+            }
+        }
+    }
+    &__privacy {
+        .privacy {
+            &__title {
+                @extend .step__title;
+                font-size: $font-size-md;
+            }
+            &__caption {
+                @extend .step__caption;
+                padding-bottom: 12px;
+            }
+        }
+    }
+}
