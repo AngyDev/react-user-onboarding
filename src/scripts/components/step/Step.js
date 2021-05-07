@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
 import { StepContext } from "../../context/StepContext";
 import steps from "../../data/steps.json";
-import ContactDetails from "../../components/contactDetails/ContactDetails";
+import ContactDetails from "../contactDetails/ContactDetails";
+import InvestmentPlans from "../investmentPlans/InvestmentPlans";
+import InvestmentPreferences from "../investmentPreferences/InvestmentPreferences";
 
 export default function Step() {
 
@@ -13,7 +15,11 @@ export default function Step() {
                 <div className="step__title">{steps.stepPage[step].title}</div>
                 <div className="step__caption">{steps.stepPage[step].caption}</div>
             </div>
-            <ContactDetails />
+            <div>
+                { (step === 1) && <ContactDetails /> }
+                { (step === 2) && <InvestmentPlans />}
+                { (step === 3) && <InvestmentPreferences />}
+            </div>
         </div>
     )
 }
