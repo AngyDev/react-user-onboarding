@@ -7,7 +7,7 @@ export default function ContactDetails() {
 
     return (
         <div data-testid="contact">
-            <form action="" className="contact__form flex flex-col">
+            <form data-testid="contact-form" action="" className="contact__form flex flex-col">
                 <div className="form__item flex flex-row justify-between">
                     <div className="form__name col-2">
                         <label htmlFor="name" className="form__label flex flex-col"> Full name
@@ -16,7 +16,7 @@ export default function ContactDetails() {
                     </div>
                     <div className="col-2">
                         <label htmlFor="phone" className="form__label flex flex-col">Phone
-                    <input className="form__element form__input" type="tel" name="phone" maxlength="10"/>
+                    <input className="form__element form__input" type="tel" name="phone" maxLength="10"/>
                         </label>
                     </div>
                 </div>
