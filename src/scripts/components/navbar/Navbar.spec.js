@@ -5,7 +5,7 @@ import '@testing-library/jest-dom';
 import Navbar from "./Navbar";
 
 
-describe("", () => {
+describe("Navbar test", () => {
 
     /**
      * Render the navbar component
