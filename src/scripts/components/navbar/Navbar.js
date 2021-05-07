@@ -19,7 +19,7 @@ export default function Navbar() {
     }
 
     return (
-        <div name="navbar" className="flex justify-between align-center">
+        <div data-testid="navbar" name="navbar" className="flex justify-between align-center">
             <Button typeClass="link" text="Back to the homepage" arrow="right" handleClick={prevStep}/>
             <div className="flex">
                 <Button typeClass="btn btn__skip pad" text="Skip for now" handleClick={skipStep}/>
