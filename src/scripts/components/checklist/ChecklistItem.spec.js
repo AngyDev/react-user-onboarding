@@ -5,39 +5,41 @@ import ChecklistItem from "./ChecklistItem";
 
 afterEach(cleanup);
 
-it("should render the checklist item active", () => {
+describe("ChecklistItem test", () => {
+    it("should render the checklist item active", () => {
 
-    const { getByTestId } = render(<ChecklistItem active={true} />);
+        const { getByTestId } = render(<ChecklistItem active={true} />);
 
-    expect(getByTestId("checklist-li").classList.contains("active")).toBeTruthy();
+        expect(getByTestId("checklist-li").classList.contains("active")).toBeTruthy();
 
-});
+    });
 
-it("should render the checklist item not active", () => {
+    it("should render the checklist item not active", () => {
 
-    const { getByTestId } = render(<ChecklistItem active={false} />);
+        const { getByTestId } = render(<ChecklistItem active={false} />);
 
-    expect(getByTestId("checklist-li").classList.contains("active")).toBeFalsy();
+        expect(getByTestId("checklist-li").classList.contains("active")).toBeFalsy();
 
-});
+    });
 
-it("should render the checklist item title", () => {
+    it("should render the checklist item title", () => {
 
-    const { getByTestId } = render(<ChecklistItem stepTitle="Contact details" />);
+        const { getByTestId } = render(<ChecklistItem stepTitle="Contact details" />);
 
-    expect(getByTestId("checklist-title").textContent).toBe("Contact details");
-});
+        expect(getByTestId("checklist-title").textContent).toBe("Contact details");
+    });
 
-it("should render the checklist item line", () => {
-    // queryByTestId matching node for a query, and return null if no elements match 
-    const { queryByTestId } = render(<ChecklistItem lastTitle={false} />);
+    it("should render the checklist item line", () => {
+        // queryByTestId matching node for a query, and return null if no elements match 
+        const { queryByTestId } = render(<ChecklistItem lastTitle={false} />);
 
-    expect(queryByTestId("checklist-line")).toBeTruthy();
-});
+        expect(queryByTestId("checklist-line")).toBeTruthy();
+    });
 
-it("should not render the checklist item line", () => {
+    it("should not render the checklist item line", () => {
 
-    const { queryByTestId } = render(<ChecklistItem lastTitle={true} />);
+        const { queryByTestId } = render(<ChecklistItem lastTitle={true} />);
 
-    expect(queryByTestId("checklist-line")).toBe(null);
-});
+        expect(queryByTestId("checklist-line")).toBe(null);
+    });
+})
