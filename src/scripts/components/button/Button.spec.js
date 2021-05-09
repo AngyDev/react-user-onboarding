@@ -54,4 +54,10 @@ describe("Button test", () => {
 
         expect(getByTestId("button").classList.contains(undefined)).toBeTruthy();
     });
+
+    it("should render the button with form", () => {
+        const { getByTestId } = render(<Button text="Button" arrow="left" form="form-id"/>);
+
+        expect(getByTestId("button").getAttribute("form")).toBe("form-id");
+    });
 })
