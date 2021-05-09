@@ -17,6 +17,6 @@ export default function Button(props) {
     }
 
     return(
-        <button data-testid="button" className={`button ${props.typeClass} flex align-center`} onClick={props.handleClick}>{rightArrow}{props.text}{leftArrow}</button>
+        <button data-testid="button" className={`button ${props.typeClass} flex align-center`} form={props.form} onClick={props.handleClick}>{rightArrow}{props.text}{leftArrow}</button>
     )
 }
