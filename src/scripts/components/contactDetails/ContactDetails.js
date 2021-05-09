@@ -7,7 +7,7 @@ export default function ContactDetails() {
 
     return (
         <div data-testid="contact">
-            <form data-testid="contact-form" action="" className="contact__form flex flex-col">
+            <form id="form-id" data-testid="contact-form" action="" className="contact__form flex flex-col" onSubmit={alert('Form submitted!')}>
                 <div className="form__item flex flex-row justify-between">
                     <div className="form__name col-2">
                         <label htmlFor="name" className="form__label flex flex-col"> Full name
@@ -16,18 +16,18 @@ export default function ContactDetails() {
                     </div>
                     <div className="col-2">
                         <label htmlFor="phone" className="form__label flex flex-col">Phone
-                    <input className="form__element form__input" type="tel" name="phone" maxLength="10"/>
+                    <input className="form__element form__input" type="tel" name="phone" maxLength="10" required/>
                         </label>
                     </div>
                 </div>
                 <div className="form__item">
                     <label htmlFor="email" className="form__label flex flex-col">Email address
-                    <input className="form__element form__input" type="email" name="phone" />
+                    <input className="form__element form__input" type="email" name="phone" required/>
                     </label>
                 </div>
                 <div>
                     <label htmlFor="country" className="form__label flex flex-col">Country</label>
-                    <select className="form__element form__select" name="country" id="">
+                    <select className="form__element" name="country" id="" required>
                         <option value=""></option>
                         <option value="Italy">Italy</option>
                         <option value="England">England</option>
