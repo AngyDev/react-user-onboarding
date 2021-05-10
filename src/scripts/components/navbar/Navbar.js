@@ -23,7 +23,10 @@ export default function Navbar() {
             <Button typeClass="link" text="Back to the homepage" arrow="right" handleClick={prevStep}/>
             <div className="flex">
                 <Button typeClass="btn btn__skip pad" text="Skip for now" handleClick={skipStep}/>
-                <Button typeClass="btn btn__next" text="Next Step" arrow="left" form="form-id"/>
+                {
+                    step === 3 ? <Button typeClass="btn btn__next" text="Finish" form="form-id"/> 
+                    : <Button typeClass="btn btn__next" text="Next Step" arrow="left" form="form-id"/>
+                }
             </div>
         </div>
     )
