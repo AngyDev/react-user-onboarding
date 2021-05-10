@@ -27,4 +27,8 @@
     &__name {
         padding-right: 20px;
     }
+    &__error {
+        @extend .font__mont-xs;
+        color: $form-error-font-color;
+    }
 }
