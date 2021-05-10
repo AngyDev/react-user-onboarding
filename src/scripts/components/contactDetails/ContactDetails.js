@@ -3,14 +3,10 @@ import React, { useContext } from "react";
 import Button from "../button/Button";
 import steps from "../../data/steps.json";
 import useForm from "../../useForm";
-import validate from "../../validateForm";
-
-import { StepContext } from "../../context/StepContext";
-
 
 export default function ContactDetails() {
 
-    const { handleChange, values, handleSubmit, errors } = useForm(validate);
+    const { handleChange, values, handleSubmit, errors } = useForm();
 
     return (
         <div data-testid="contact">
