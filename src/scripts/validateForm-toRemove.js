@@ -1,5 +1,5 @@
 export default function validateForm(values) {
-    let errors = {}
+    let errors = {};
 
     if (!values.name.trim()) {
         errors.name = "Name is required";
@@ -24,5 +24,9 @@ export default function validateForm(values) {
         errors.country = "Country is required";
     }
     
+    // From
+    if(!values.from) {
+        errors.from = "From is required";
+    }
     return errors;
 }
