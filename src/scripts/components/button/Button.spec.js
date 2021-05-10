@@ -60,4 +60,10 @@ describe("Button test", () => {
 
         expect(getByTestId("button").getAttribute("form")).toBe("form-id");
     });
+
+    it("should render the button without form id", () => {
+        const { getByTestId } = render(<Button text="Button" arrow="left"/>);
+
+        expect(getByTestId("button").getAttribute("form")).toBeNull();
+    });
 })
