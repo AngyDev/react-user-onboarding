@@ -45,6 +45,7 @@ export default function InvestmentPlans() {
                         <RadioBox labelFor="yes" label="Yes" name="radio" value={true} checked={values.radio === "true"} handleChange={handleChange} />
                         <RadioBox labelFor="no" label="No" name="radio" value={false} checked={values.radio === "false"} handleChange={handleChange} />
                     </div>
+                    {errors.radio && <span className="form__error">{errors.radio}</span>}
                 </div>
             </form>
         </div>
