@@ -10,8 +10,8 @@ const useForm = () => {
         phone: "",
         email: "",
         country: "",
-        from: "",
-        to: "",
+        from: 10000,
+        to: 200000,
         radio: ""
     });
 
@@ -25,7 +25,6 @@ const useForm = () => {
             ...values,
             [name]: value
         });
-        console.log(values);
     }
 
     const handleSubmit = (e) => {
@@ -35,8 +34,6 @@ const useForm = () => {
             const validateContact = validation.validateContact(values);
             setErrors(validateContact);
             
-            console.log(validateContact);
-            
             // Checks if there aren't errors and goes to the next step
             if(Object.keys(validateContact).length === 0) {
                 setStep(step + 1);
@@ -44,8 +41,6 @@ const useForm = () => {
         } else if (step == 2) {
             const validatePlans = validation.validateInvestmentPlans(values);
             setErrors(validatePlans);
-            
-            console.log(validatePlans);
             
             // Checks if there aren't errors and goes to the next step
             if(Object.keys(validatePlans).length === 0) {
