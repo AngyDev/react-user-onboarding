@@ -1,0 +1,13 @@
+{
+    "preferences": 
+    [
+        "Single family",
+        "Residential multifamily",
+        "Commercial retail",
+        "Commercial industrial",
+        "Commercial hospitality",
+        "Commercial warehousing",
+        "Commercial office",
+        "Other"
+    ]
+}
