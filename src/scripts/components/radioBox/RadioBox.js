@@ -1,10 +1,6 @@
 import React from "react";
 
-export default function RadioBox(props) {
-
-    const onBoxClick = () => {
-        document.getElementById(id).click()
-    };
+export default function Radiobox(props) {
 
     return (
         <div className="radiobox">
