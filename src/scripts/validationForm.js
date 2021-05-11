@@ -42,6 +42,10 @@ export default class ValidationForm {
             errors.to = "To is required";
         }
 
+        if(!values.radio) {
+            errors.radio = "Answer is required";
+        }
+
         return errors;
     }
 }
