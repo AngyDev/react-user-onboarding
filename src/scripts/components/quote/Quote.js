@@ -14,7 +14,7 @@ export default function Quote(props) {
                 </div>
                 <div className="quote__content">
                     <div className="quote__text" data-testid="quote-text">{props.text}</div>
-                    <div className="flex justify-between">
+                    <div className="flex flex-row flex-wrap justify-between">
                         <div className="flex flex-col">
                             <span className="author__name" data-testid="quote-author">{props.authorName}</span>
                             <span className="author__role" data-testid="quote-author-role">{props.authorRole}</span>
