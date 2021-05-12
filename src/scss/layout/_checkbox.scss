@@ -12,6 +12,6 @@
     &:focus-within{
         border: 1.5px solid $base-color;
         color: $base-color;
-        background-color: lighten($base-color, 50%)
+        background-color:  $checkbox-active-bg-color;
     }
 }
