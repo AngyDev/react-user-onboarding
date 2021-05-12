@@ -9,9 +9,8 @@ describe("Contact details test", () => {
     afterEach(cleanup);
     
     /**
-     * Render the header component
-     * @param {Context} step 
-     * @returns The render of the Header component with the usage of the context value
+     * Render the contact details component
+     * @returns The render of the contact details component
      */
      function renderContactDetails() {
         return render(
