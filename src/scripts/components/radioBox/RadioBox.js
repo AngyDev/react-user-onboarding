@@ -3,9 +3,10 @@ import React from "react";
 export default function Radiobox(props) {
 
     return (
-        <div className="radiobox">
+        <div data-testid="radiobox" className="radiobox">
             <label htmlFor={props.labelFor} className="flex align-center justify-center">
                 <input
+                    data-testid="radio-input"
                     className="radiobox__input"
                     type="radio"
                     name={props.name}

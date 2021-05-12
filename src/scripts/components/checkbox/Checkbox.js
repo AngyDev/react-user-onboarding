@@ -2,8 +2,9 @@ import React from "react";
 
 export default function Checkbox(props) {
     return (
-        <div className="checkbox flex flex-col justify-between">
+        <div data-testid="checkbox" className="checkbox flex flex-col justify-between">
             <input 
+                data-testid="checkbox-input"
                 className="checkbox__input"
                 type="checkbox" 
                 name={props.name}
