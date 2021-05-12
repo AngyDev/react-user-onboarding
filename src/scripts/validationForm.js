@@ -42,8 +42,20 @@ export default class ValidationForm {
             errors.to = "To is required";
         }
 
+        // Radiobox
         if(!values.radio) {
             errors.radio = "Answer is required";
+        }
+
+        return errors;
+    }
+
+    validateInvestmentPreferences(values) {
+        let errors = {};
+
+        // Checkbox
+        if (values.length === 0) {
+            errors.check = "Answer is required";
         }
 
         return errors;
