@@ -9,30 +9,55 @@ export default function InvestmentPlans() {
 
     let array = [];
     const [errors, setErrors] = useState({});
-    
+
     const handleChange = e => {
         const target = e.target;
         const checked = target.type === 'checkbox' ? target.checked : target.value;
         const value = target.value;
-        
+
         console.log(checked + " value " + value);
-        
+
         if (checked) {
             array.push(value);
         } else {
             array = array.filter(el => el !== value);
         }
-        
+
         console.log(array);
-        
+
     }
 
-    function handleSubmit(event) {
-        event.preventDefault();
+    const handleSubmit = async e => {
+        e.preventDefault();
 
-        setErrors(validation.validateInvestmentPreferences(array));
+        const validateForm = validation.validateInvestmentPreferences(array);
+        setErrors(validateForm);
+
+        if (Object.keys(validateForm).length === 0) {
+
+            const loading = document.getElementById("loading");
+            loading.classList.add("display");
+
+            await postData();
+
+            loading.innerHTML = "The user has been saved";
+        }
 
         console.log("Submit of the form");
+    }
+
+    const postData = async () => {
+
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ "message": "Hello World" })
+        };
+
+        const response = await fetch('https://e3c711b4-41bb-4b0b-b1b5-944550274dc9.mock.pstmn.io/v1/user', requestOptions);
+        const data = await response.json();
+
+        return data;
     }
 
     return (
@@ -58,6 +83,7 @@ export default function InvestmentPlans() {
                 </div>
                 {errors.check && <span className="form__error">{errors.check}</span>}
             </form>
+            <div id="loading" className="loading">Loading...</div>
         </div>
     )
 }
