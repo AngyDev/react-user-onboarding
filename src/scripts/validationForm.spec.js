@@ -50,11 +50,18 @@ describe("Validate form test", () => {
         expect(errors).toEqual({});
     });
 
-    it("validate investment plans empty imputs", () => {
+    it("validate investment plans empty inputs", () => {
         const errors = validation.validateInvestmentPlans(values);
 
         expect(errors.from).toBe("From is required");
         expect(errors.to).toBe("To is required");
         expect(errors.radio).toBe("Answer is required");
+    });
+
+    it("validate investment preferences empty inputs", () => {
+        const values = [];
+        const errors = validation.validateInvestmentPreferences(values);
+
+        expect(errors.check).toBe("Answer is required");
     });
 })
