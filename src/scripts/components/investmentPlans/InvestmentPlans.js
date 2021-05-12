@@ -9,10 +9,7 @@ export default function InvestmentPlans() {
 
     const { handleChange, values, handleSubmit, errors } = useForm();
 
-    const formatter = new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD',
-    });
+    
 
     return (
         <div data-testid="investment-plans" className="flex flex-col">
