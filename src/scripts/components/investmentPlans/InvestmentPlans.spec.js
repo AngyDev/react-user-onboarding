@@ -22,5 +22,5 @@ describe("Investment plans test", () => {
     it("should contains two radiobox input", () => {
         renderInvestmentPlans();
         expect(screen.queryAllByTestId("radiobox")).toHaveLength(2);
-    })
+    });
 })
