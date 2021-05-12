@@ -4,3 +4,12 @@
         row-gap: 20px;
     }
 }
+
+.loading {
+    visibility: hidden;
+    @extend .font__mont-xs;
+}
+
+.display {
+    visibility: visible;
+}
