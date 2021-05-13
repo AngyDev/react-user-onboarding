@@ -1,11 +1,13 @@
 import { useState, useContext } from 'react';
 import { StepContext } from "./context/StepContext";
 import Validation from "./validationForm";
+import { UserContext } from "./context/UserContext";
 
 const useForm = () => {
     const [step, setStep] = useContext(StepContext);
+    const [values, setValues] = useContext(UserContext);
 
-    const [values, setValues] = useState({
+    /*const [values, setValues] = useState({
         name: "",
         phone: "",
         email: "",
@@ -13,7 +15,7 @@ const useForm = () => {
         from: 10000,
         to: 200000,
         radio: ""
-    });
+    });*/
 
     const [errors, setErrors] = useState({});
 
@@ -49,6 +51,7 @@ const useForm = () => {
         }
         
         console.log("name " + values.name + " from " + values.from);
+        console.log(values);
     }
 
     return { handleChange, values, handleSubmit, errors };
