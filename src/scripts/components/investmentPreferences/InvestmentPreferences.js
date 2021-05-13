@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
 import Checkbox from "../checkbox/Checkbox";
 import preferences from "../../data/preferences.json";
-import Validation from "../../validationForm";
+import Validation from "../../validation/validationForm";
 import { UserContext } from "../../context/UserContext";
-import ValidationUser from "../../validationUser";
+import ValidationUser from "../../validation/validationUser";
 
 export default function InvestmentPlans() {
 
