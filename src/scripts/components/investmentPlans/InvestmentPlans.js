@@ -9,8 +9,6 @@ export default function InvestmentPlans() {
 
     const { handleChange, values, handleSubmit, errors } = useForm();
 
-    
-
     return (
         <div data-testid="investment-plans" className="flex flex-col">
             <div className="investment__question">How much are you planning to invest in this year?</div>
