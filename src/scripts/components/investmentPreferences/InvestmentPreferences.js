@@ -5,7 +5,7 @@ import Validation from "../../validation/validationForm";
 import { UserContext } from "../../context/UserContext";
 import ValidationUser from "../../validation/validationUser";
 
-export default function InvestmentPlans() {
+export default function InvestmentPreferences() {
 
     const validation = new Validation();
     const validationUser = new ValidationUser();
