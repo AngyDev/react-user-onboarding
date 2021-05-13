@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Sidebar from "../sidebar/Sidebar";
 import Main from "../main/Main";
-import {StepContext} from "../../context/StepContext";
+import { StepContext } from "../../context/StepContext";
+import { UserProvider } from "../../context/UserContext";
 
 export default function App() {
 
@@ -9,10 +10,12 @@ export default function App() {
 
     return (
         <StepContext.Provider value={[step, setStep]}>
-            <div className="app-container">
-                <Sidebar />
-                <Main />
-            </div>
+            <UserProvider >
+                <div className="app-container">
+                    <Sidebar />
+                    <Main />
+                </div>
+            </UserProvider>
         </StepContext.Provider>
     )
 
