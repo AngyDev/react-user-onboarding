@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Checkbox from "../checkbox/Checkbox";
 import preferences from "../../data/preferences.json";
 import Validation from "../../validationForm";
+import { UserContext } from "../../context/UserContext";
+import ValidationUser from "../../validationUser";
 
 export default function InvestmentPlans() {
 
     const validation = new Validation();
+    const validationUser = new ValidationUser();
 
     let array = [];
     const [errors, setErrors] = useState({});
+
+    const [user, setUser] = useContext(UserContext);
 
     const handleChange = e => {
         const target = e.target;
@@ -22,9 +27,6 @@ export default function InvestmentPlans() {
         } else {
             array = array.filter(el => el !== value);
         }
-
-        console.log(array);
-
     }
 
     const handleSubmit = async e => {
@@ -35,15 +37,31 @@ export default function InvestmentPlans() {
 
         if (Object.keys(validateForm).length === 0) {
 
-            const loading = document.getElementById("loading");
-            loading.classList.add("display");
+            setUser({
+                ...user,
+                preferences: array
+            });
 
-            await postData();
+            if (validationUser.validateUser(user)) {
 
-            loading.innerHTML = "The user has been saved";
+                const loading = document.getElementById("loading");
+                loading.classList.add("display");
+
+                try {
+                    const response = await postData();
+                    resetUser();
+                } catch (error) {
+                    return Promise.reject(error);
+                    loading.innerHTML = error;
+                }
+
+                loading.innerHTML = "The user has been saved";
+            } else {
+                setErrors({user: "Some inputs are missed back to the homepage"});
+            }
         }
 
-        console.log("Submit of the form");
+        console.log("Submit ended");
     }
 
     const postData = async () => {
@@ -51,13 +69,31 @@ export default function InvestmentPlans() {
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ "message": "Hello World" })
+            body: JSON.stringify(user)
         };
 
-        const response = await fetch('https://e3c711b4-41bb-4b0b-b1b5-944550274dc9.mock.pstmn.io/v1/user', requestOptions);
-        const data = await response.json();
+        try {
+            const response = await fetch('https://e3c711b4-41bb-4b0b-b1b5-944550274dc9.mock.pstmn.io/v1/user', requestOptions);
+            const data = await response.json();
 
-        return data;
+            return Promise.resolve(data);
+        } catch (error) {
+            console.log(error);
+            return Promise.reject(error);
+        }
+    }
+
+    const resetUser = () => {
+        setUser({
+            name: "",
+            phone: "",
+            email: "",
+            country: "",
+            from: 10000,
+            to: 200000,
+            radio: "",
+            preferences: []
+        })
     }
 
     return (
@@ -84,6 +120,7 @@ export default function InvestmentPlans() {
                 {errors.check && <span className="form__error">{errors.check}</span>}
             </form>
             <div id="loading" className="loading">Loading...</div>
+            {errors.user && <span className="form__error">{errors.user}</span>}
         </div>
     )
 }
