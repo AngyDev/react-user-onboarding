@@ -1,5 +1,10 @@
 export default class ValidationForm {
 
+    /**
+     * Validates the form of investment preferences
+     * @param {Object} values 
+     * @returns An Object of errors
+     */
     validateContact(values) {
         let errors = {};
 
@@ -29,6 +34,11 @@ export default class ValidationForm {
         return errors;
     }
 
+    /**
+     * Validates the form of investment preferences
+     * @param {Object} values 
+     * @returns An Object of errors
+     */
     validateInvestmentPlans(values) {
         let errors = {};
 
@@ -50,6 +60,11 @@ export default class ValidationForm {
         return errors;
     }
 
+    /**
+     * Validates the form of investment preferences
+     * @param {Object} values 
+     * @returns An Object of errors
+     */
     validateInvestmentPreferences(values) {
         let errors = {};
 
