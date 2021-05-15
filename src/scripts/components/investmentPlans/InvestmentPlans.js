@@ -1,5 +1,4 @@
-import React, { useContext, useState } from "react";
-
+import React from "react";
 import Radiobox from "../radiobox/Radiobox";
 import PriceInput from "../priceInput/PriceInput";
 import PriceSlider from "../priceSlider/PriceSlider";
@@ -25,7 +24,7 @@ export default function InvestmentPlans() {
                     </div>
                 </div>
                 <div className="form__item">
-                    <PriceSlider />
+                    <PriceSlider start={values.from} end={values.to}/>
                 </div>
                 <div className="flex flex-col">
                     <div className="investment__question">Are you an accredited investor?</div>
