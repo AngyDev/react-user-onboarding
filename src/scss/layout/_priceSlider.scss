@@ -1,27 +1,93 @@
 .slider {
-    background: $slider-bg;
-    border-radius: 1px;
-    cursor: pointer;
-    height: 4px;
+    width: 100%;
+    position: relative;
+    padding-top: 16px;
     &--background {
-        left: 0;
-        margin-top: -0.15rem;
-        right: 0;
-        top: 50%;
+        position: absolute;
+        width: 100%;
+        display: flex;
+    }
+    &__line {
+        flex-basis: 20%;
+        width: 20%;
+        height: 4px;
+        background-color: $slider-bg;
+        position: relative;
+        &:before {
+            height: 14px;
+            width: 4px;
+            background: $slider-bg;
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: 0;
+        }
+        &:last-child {
+            &:after {
+                height: 14px;
+                width: 4px;
+                background-color: #eaf0f6;
+                content: "";
+                position: absolute;
+                top: -5px;
+                right: 0;
+            }
+        }
+    }
+    &__active-bar {
+        position: absolute;
+        width: 100%;
+        display: flex;
     }
     &--active {
-        background: $base-color;
+        background-color: $base-color;
+        &:before {
+            background-color: $base-color;
+        }
     }
-    /*&__pointer {
-        background: $base-color;
-        width: 16px;
-        height: 16px;
-        border-radius: 1px;
-        position: absolute;
-    }*/
+    &__line--active {
+        flex-basis: 20%;
+        width: 20%;
+        height: 4px;
+        position: relative;
+        background-color: $base-color;
+        &:before {
+            height: 14px;
+            width: 4px;
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: 0;
+            background-color: $base-color;
+        }
+        &:first-child {
+            &:before {
+                height: 14px;
+                width: 14px;
+                background-color: $base-color;
+                content: "";
+                position: absolute;
+                top: -5px;
+                left: -6px;
+            }
+        }
+        &:last-child {
+            &:after {
+                height: 14px;
+                width: 14px;
+                background-color: $base-color;
+                content: "";
+                position: absolute;
+                top: -5px;
+                right: -6px;
+            }
+        }
+    }
     &__label {
+        display: flex;
+        //margin-left: -10%;
+        width: 120%;
         padding-top: 32px;
-        width: 100%;
         @extend .font__mont-xs;
         color: $slider-prices-color;
         span {
