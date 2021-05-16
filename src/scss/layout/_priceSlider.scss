@@ -93,5 +93,8 @@
         span {
             flex-basis: 20%;
         }
+        &--active {
+            color: $base-color;
+        }
     }
 }
