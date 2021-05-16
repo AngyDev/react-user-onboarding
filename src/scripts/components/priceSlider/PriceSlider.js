@@ -30,12 +30,17 @@ export default function PriceSlider(props) {
                     {prices.map((item, i) => ((i < (prices.length - 1)) && <span key={i} className="slider__line"></span>))}
                     {/* OK prices.map((item, i) => ((i < (prices.length - 1)) && ((i >= startBar && i < endBar) ? <span key={i} className="slider__line slider--active"></span> : <span key={i} className="slider__line"></span>)))*/}
                 </div>
-                <div className="slider__active-bar" style={{ left: startBar > 0 ? `${startBar*20}%`: '0'}}>
+                <div className="slider__active-bar" style={{ left: startBar > 0 ? `${startBar * 20}%` : '0' }}>
                     {prices.map((item, i) => ((i < (prices.length - 1)) && ((i >= startBar && i < endBar) && <span key={i} className="slider__line--active"></span>)))}
                 </div>
             </div>
             <div className="slider__label">
-                {prices.map((item, i) => (<span key={i} >{formatter.format(item).replace(/\D00$/, '')}{i === prices.length - 1 && "+"}</span>))}
+                {prices.map((item, i) => (
+                    (i >= startBar && i <= endBar) ?
+                        <span className="slider__label--active" key={i} >{formatter.format(item).replace(/\D00$/, '')}{i === prices.length - 1 && "+"}</span> :
+                        <span key={i} >{formatter.format(item).replace(/\D00$/, '')}{i === prices.length - 1 && "+"}</span>
+                )
+                )}
             </div>
         </div>
     )
