@@ -6,7 +6,8 @@ export default class ValidationUser {
      * @returns Boolean
      */
     validateUser(user) {
-        if (!user.name || !user.phone || !user.email || !user.country || !user.radio || user.preferences.lenght === 0) {
+
+        if (!user.name || !user.phone || !user.email || !user.country || !user.radio || user.preferences.length === 0) {
             return false;
         }
         return true;
