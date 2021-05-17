@@ -9,13 +9,13 @@ export default function PriceSlider(props) {
     useEffect(() => {
         prices.forEach((item, i) => {
             if (props.start >= item) { setStartBar(i) }
-        })
+        });
     });
 
     useEffect(() => {
         prices.forEach((item, i) => {
             if (props.end >= item) { setEndBar(i) }
-        })
+        });
     });
 
     const formatter = new Intl.NumberFormat('en-US', {
@@ -24,7 +24,7 @@ export default function PriceSlider(props) {
     });
 
     return (
-        <div>
+        <div data-testid="price-slider">
             <div className="slider">
                 <div className="slider--background">
                     {prices.map((item, i) => ((i < (prices.length - 1)) && <span key={i} className="slider__line"></span>))}
