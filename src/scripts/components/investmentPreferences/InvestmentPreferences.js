@@ -43,7 +43,7 @@ export default function InvestmentPreferences() {
 
         console.log("Submit ended");
     }
-    
+
     const validateAndSubmit = async () => {
         if (validationUser.validateUser(user)) {
 
