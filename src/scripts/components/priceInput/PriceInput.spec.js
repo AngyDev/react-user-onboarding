@@ -9,10 +9,10 @@ describe("Price input test component", () => {
 
     it("should render the input label name", () => {
         act(() => {
-            render(<PriceInput label="Form" />);
+            render(<PriceInput label="From" />);
         });
 
-        expect(screen.getByTestId("price-input").textContent).toBe("Form");
+        expect(screen.getByTestId("price-input").textContent).toBe("From");
     });
 
 })
