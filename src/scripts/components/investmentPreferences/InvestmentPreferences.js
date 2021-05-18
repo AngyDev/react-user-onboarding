@@ -38,7 +38,7 @@ export default function InvestmentPreferences() {
 
         if (Object.keys(validateForm).length === 0) {
 
-            validateAndSubmit();
+            await validateAndSubmit();
         }
 
         console.log("Submit ended");
