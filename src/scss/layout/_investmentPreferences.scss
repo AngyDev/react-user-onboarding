@@ -9,6 +9,7 @@
 .loading {
     visibility: hidden;
     @extend .font__mont-xs;
+    overflow-wrap: break-word;
 }
 
 .display {
