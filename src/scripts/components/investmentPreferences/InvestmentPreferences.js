@@ -61,7 +61,7 @@ export default function InvestmentPreferences() {
             }
             //loading.innerHTML = "The user has been saved";
 
-            loading.innerHTML = "The user has been saved" + " { " + user.name + " " + user.phone + " " + user.email + " " + user.country + " " + user.from + " " + user.to + " " + user.radio + " " + user.preferences + " }";
+            loading.innerHTML = "The user has been saved " + JSON.stringify(user);
         } else {
             setErrors({ user: "Some inputs are missed, back to the homepage" });
         }
