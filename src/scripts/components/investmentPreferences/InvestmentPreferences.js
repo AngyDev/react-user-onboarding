@@ -102,7 +102,7 @@ export default function InvestmentPreferences() {
     return (
         <div data-testid="investment-preferences">
             <form id="form-id" onSubmit={handleSubmit}>
-                <div className="pref__row flex flex-row flex-wrap justify-between">
+                <div className="pref__row flex flex-row justify-between">
                     {
                         preferencesList.preferences.map((preference, i) => {
                             if (i <= 3) {
@@ -111,7 +111,7 @@ export default function InvestmentPreferences() {
                         })
                     }
                 </div>
-                <div className="pref__row flex flex-row flex-wrap justify-between">
+                <div className="pref__row flex flex-row justify-between">
                     {
                         preferencesList.preferences.map((preference, i) => {
                             if (i > 3) {
