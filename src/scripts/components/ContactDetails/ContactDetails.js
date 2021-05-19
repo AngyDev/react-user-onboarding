@@ -4,14 +4,25 @@ import Input from "../Input/Input";
 import Button from "../Button/Button";
 import steps from "../../data/steps.json";
 import useForm from "../../hooks/useForm/useForm";
+import ValidationForm from "../../validation/validationForm";
+import { StepContext } from "../../context/StepContext";
+import { UserContext } from "../../context/UserContext";
 
 export default function ContactDetails() {
 
     const { handleChange, values, handleSubmit, errors } = useForm();
+    const [step, setStep] = useContext(StepContext);
+    const [user, setUser] = useContext(UserContext);
+
+    const validation = new ValidationForm();
+
+    const nextStep = () => {
+        setStep(step + 1);
+    }
 
     return (
         <div data-testid="contact">
-            <form id="form-id" data-testid="contact-form" className="contact__form flex flex-col" onSubmit={handleSubmit}>
+            <form id="form-id" data-testid="contact-form" className="contact__form flex flex-col" onSubmit={(e) => handleSubmit(e, validation.validateContact(user), nextStep)}>
                 <div className="form__item flex flex-row justify-between">
                     <div className="form__name col-2">
                         <Input inputName="name" label="Full name" type="text" value={values.name} onChange={handleChange} />
