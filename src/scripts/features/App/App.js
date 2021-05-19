@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Sidebar from "../../components/sidebar/Sidebar";
+import Sidebar from "../../components/Sidebar/Sidebar";
 import Main from "../../components/main/Main";
 import { StepContext } from "../../context/StepContext";
 import { UserProvider } from "../../context/UserContext";
