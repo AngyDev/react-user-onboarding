@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import Checkbox from "../checkbox/Checkbox";
+import Checkbox from "../Checkbox/Checkbox";
 import preferencesList from "../../data/preferences.json";
 import Validation from "../../validation/validationForm";
 import { UserContext } from "../../context/UserContext";

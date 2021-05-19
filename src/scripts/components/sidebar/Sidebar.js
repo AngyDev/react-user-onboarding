@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import Logo from "../logo/Logo";
-import Checklist from "../checklist/Checklist";
-import Quote from "../quote/Quote";
+import Logo from "../Logo/Logo";
+import Checklist from "../Checklist/Checklist";
+import Quote from "../Quote/Quote";
 import quotes from "../../data/quotes.json";
 import { StepContext } from "../../context/StepContext";
 

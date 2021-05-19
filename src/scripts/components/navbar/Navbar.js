@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Button from "../button/Button";
+import Button from "../Button/Button";
 import { StepContext } from "../../context/StepContext";
 import { UserContext } from "../../context/UserContext";
 

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { StepContext } from "../../context/StepContext";
-import Button from "../button/Button";
+import Button from "../Button/Button";
 
 /**
  * Header Component

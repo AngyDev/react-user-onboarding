@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { StepContext } from "../../context/StepContext";
 import steps from "../../data/steps.json";
-import ContactDetails from "../contactDetails/ContactDetails";
-import InvestmentPlans from "../investmentPlans/InvestmentPlans";
-import InvestmentPreferences from "../investmentPreferences/InvestmentPreferences";
+import ContactDetails from "../ContactDetails/ContactDetails";
+import InvestmentPlans from "../InvestmentPlans/InvestmentPlans";
+import InvestmentPreferences from "../InvestmentPreferences/InvestmentPreferences";
 
 export default function Step() {
 

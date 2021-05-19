@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../header/Header";
-import Step from "../step/Step";
-import Navbar from "../navbar/Navbar";
+import Header from "../Header/Header";
+import Step from "../Step/Step";
+import Navbar from "../Navbar/Navbar";
 
 export default function Main() {
     return (

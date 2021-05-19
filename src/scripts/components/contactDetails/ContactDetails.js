@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 
-import Input from "../input/Input";
-import Button from "../button/Button";
+import Input from "../Input/Input";
+import Button from "../Button/Button";
 import steps from "../../data/steps.json";
-import useForm from "../../useForm";
+import useForm from "../../hooks/useForm/useForm";
 
 export default function ContactDetails() {
 

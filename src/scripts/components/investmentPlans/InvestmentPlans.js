@@ -1,8 +1,8 @@
 import React from "react";
-import Radiobox from "../radiobox/Radiobox";
-import PriceInput from "../priceInput/PriceInput";
-import PriceSlider from "../priceSlider/PriceSlider";
-import useForm from "../../useForm";
+import Radiobox from "../Radiobox/Radiobox";
+import PriceInput from "../PriceInput/PriceInput";
+import PriceSlider from "../PriceSlider/PriceSlider";
+import useForm from "../../hooks/useForm/useForm";
 
 export default function InvestmentPlans() {
 
