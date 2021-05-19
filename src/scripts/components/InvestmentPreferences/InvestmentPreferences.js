@@ -4,8 +4,11 @@ import preferencesList from "../../data/preferences.json";
 import Validation from "../../validation/validationForm";
 import { UserContext } from "../../context/UserContext";
 import ValidationUser from "../../validation/validationUser";
+import useForm from "../../hooks/useForm/useForm";
 
 export default function InvestmentPreferences() {
+
+    const { handleChange, handleSubmit } = useForm();
 
     const validation = new Validation();
     const validationUser = new ValidationUser();
@@ -13,36 +16,6 @@ export default function InvestmentPreferences() {
     const [errors, setErrors] = useState({});
 
     const [user, setUser] = useContext(UserContext);
-
-    const handleChange = e => {
-        const target = e.target;
-        const checked = target.type === 'checkbox' ? target.checked : target.value;
-        const value = target.value;
-
-        if (checked) {
-            setUser(prevUser => {
-                return { ...prevUser, preferences: [...prevUser.preferences, value] }
-            });
-        } else {
-            setUser(prevUser => {
-                return { ...prevUser, preferences: [...prevUser.preferences, value].filter(el => el !== value) }
-            });
-        }
-    }
-
-    const handleSubmit = async e => {
-        e.preventDefault();
-
-        const validateForm = validation.validateInvestmentPreferences(user.preferences);
-        setErrors(validateForm);
-
-        if (Object.keys(validateForm).length === 0) {
-
-            await validateAndSubmit();
-        }
-
-        console.log("Submit ended");
-    }
 
     const validateAndSubmit = async () => {
         if (validationUser.validateUser(user)) {
@@ -101,12 +74,12 @@ export default function InvestmentPreferences() {
 
     return (
         <div data-testid="investment-preferences">
-            <form id="form-id" onSubmit={handleSubmit}>
+            <form id="form-id" onSubmit={(e) => handleSubmit(e, validation.validateInvestmentPreferences(user.preferences), validateAndSubmit)}>
                 <div className="pref__row flex flex-row justify-between">
                     {
                         preferencesList.preferences.map((preference, i) => {
                             if (i <= 3) {
-                                return <Checkbox key={i} label={preference} value={preference} name="preferences" onChange={handleChange} />
+                                return <Checkbox key={i} label={preference} value={preference} name="preferences" onChange={(e) => handleChange(e, "array")} />
                             }
                         })
                     }
@@ -115,7 +88,7 @@ export default function InvestmentPreferences() {
                     {
                         preferencesList.preferences.map((preference, i) => {
                             if (i > 3) {
-                                return <Checkbox key={i} label={preference} value={preference} name="preferences" onChange={handleChange} />
+                                return <Checkbox key={i} label={preference} value={preference} name="preferences" onChange={(e) => handleChange(e, "array")} />
                             }
                         })
                     }
