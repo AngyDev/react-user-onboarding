@@ -1,17 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import Radiobox from "../Radiobox/Radiobox";
 import PriceInput from "../PriceInput/PriceInput";
 import PriceSlider from "../PriceSlider/PriceSlider";
 import useForm from "../../hooks/useForm/useForm";
+import ValidationForm from "../../validation/validationForm";
+import { StepContext } from "../../context/StepContext";
+import { UserContext } from "../../context/UserContext";
 
 export default function InvestmentPlans() {
 
     const { handleChange, values, handleSubmit, errors } = useForm();
 
+    const [step, setStep] = useContext(StepContext);
+    const [user, setUser] = useContext(UserContext);
+
+    const validation = new ValidationForm();
+
+    const nextStep = () => {
+        setStep(step + 1);
+    }
+
     return (
         <div data-testid="investment-plans" className="flex flex-col">
             <div className="investment__question">How much are you planning to invest in this year?</div>
-            <form id="form-id" onSubmit={handleSubmit}>
+            <form id="form-id" onSubmit={(e) => handleSubmit(e, validation.validateInvestmentPlans(user), nextStep)}>
 
                 <div className="form__item flex flex-row justify-between">
                     <div className="form__name col-2">

@@ -8,6 +8,9 @@ export default function Navbar() {
     const [step, setStep] = useContext(StepContext);
     const [user, setUser] = useContext(UserContext);
 
+    /**
+     * Skips the step without any checks on the inputs
+     */
     const skipStep = () => {
         if (step < 3) {
             setStep(step + 1);
@@ -15,20 +18,10 @@ export default function Navbar() {
     }
 
     /**
-     * Back to the homepage and reset the user object
+     * Back to the homepage
      */
     const backToHome = () => {
         if (step > 1) {
-            /*setUser({
-                name: "",
-                phone: "",
-                email: "",
-                country: "",
-                from: 10000,
-                to: 200000,
-                radio: "",
-                preferences: []
-            });*/
             setStep(1);
         }
     }
