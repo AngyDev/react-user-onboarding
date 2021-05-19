@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import ChecklistItem from "./ChecklistItem";
+import ChecklistItem from "../ChecklistItem/ChecklistItem";
 import steps from "../../data/steps.json";
 import {StepContext} from "../../context/StepContext";
 

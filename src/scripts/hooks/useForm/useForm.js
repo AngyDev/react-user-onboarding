@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react';
-import { StepContext } from "./context/StepContext";
-import Validation from "./validation/validationForm";
-import { UserContext } from "./context/UserContext";
+import { StepContext } from "../../context/StepContext";
+import Validation from "../../validation/validationForm";
+import { UserContext } from "../../context/UserContext";
 
 const useForm = () => {
     const [step, setStep] = useContext(StepContext);
