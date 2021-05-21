@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import Input from "./Input";
 import { act } from "react-dom/test-utils";
 
@@ -20,4 +20,20 @@ describe("Input test component", () => {
 
         expect(screen.getByTestId("input-input").getAttribute("name")).toBe("name");
     });
-})
+
+    it("updates on change", () => {
+        const mockChange = jest.fn();
+
+        act(() => {
+            render(<Input inputName="name" onChange={mockChange}/>)
+        });
+
+        const input = screen.getByTestId("input-input");
+        expect(input.value).toEqual("");
+        
+        fireEvent.change(input, { target: { value: "Test" } });
+        expect(input.value).toBe("Test");
+        
+        expect(mockChange).toHaveBeenCalled();
+    });
+});
