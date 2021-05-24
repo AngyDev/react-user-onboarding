@@ -7,6 +7,7 @@ export default function Checkbox(props) {
                 data-testid="checkbox-input"
                 className="checkbox__input"
                 type="checkbox" 
+                aria-label={props.value}
                 name={props.name}
                 value={props.value}
                 onChange={props.onChange}
