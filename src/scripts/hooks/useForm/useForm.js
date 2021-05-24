@@ -52,6 +52,7 @@ const useForm = () => {
         if (Object.keys(validateForm).length !== 0) {
             setErrors(validateForm);
         } else {
+            setErrors({});
             callback();
         }
     }
