@@ -8,12 +8,12 @@ import useForm from "../../hooks/useForm/useForm";
 
 export default function InvestmentPreferences() {
 
-    const { handleChange, handleSubmit } = useForm();
+    const { handleChange, handleSubmit, errors } = useForm();
 
     const validation = new Validation();
     const validationUser = new ValidationUser();
 
-    const [errors, setErrors] = useState({});
+    const [userErrors, setUserErrors] = useState({});
 
     const [user, setUser] = useContext(UserContext);
 
@@ -36,7 +36,7 @@ export default function InvestmentPreferences() {
 
             loading.innerHTML = "The user has been saved " + JSON.stringify(user);
         } else {
-            setErrors({ user: "Some inputs are missed, back to the homepage" });
+            setUserErrors({ user: "Some inputs are missed, back to the homepage" });
         }
     }
 
@@ -96,7 +96,7 @@ export default function InvestmentPreferences() {
                 {errors.check && <span className="form__error">{errors.check}</span>}
             </form>
             <div id="loading" className="loading">Loading...</div>
-            {errors.user && <span className="form__error">{errors.user}</span>}
+            {userErrors.user && <span className="form__error">{userErrors.user}</span>}
         </div>
     )
 }
