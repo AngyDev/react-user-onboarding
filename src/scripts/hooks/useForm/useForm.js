@@ -1,15 +1,11 @@
 import { useState, useContext } from 'react';
-import { StepContext } from "../../context/StepContext";
 import Validation from "../../validation/validationForm";
 import { UserContext } from "../../context/UserContext";
 
 const useForm = () => {
-    const [step, setStep] = useContext(StepContext);
     const [values, setValues] = useContext(UserContext);
 
     const [errors, setErrors] = useState({});
-
-    const validation = new Validation();
 
     /**
      * A global handle change
