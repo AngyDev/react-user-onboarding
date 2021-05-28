@@ -11,6 +11,8 @@ export default function Checkbox(props) {
                 name={props.name}
                 value={props.value}
                 onChange={props.onChange}
+                onClick={props.onClick}
+                checked={props.checked}
                 />
             <label htmlFor="" className="checkbox__label">
                 {props.label}
