@@ -16,13 +16,14 @@
     height: 48px;
     justify-content: center;
     border-radius: 4px;
-    margin-left: 16px;
     &__next {
+        margin-left: 16px;
         color: $white;
         background: $button-next-bg-color;
         box-shadow: 0px 0px 20px rgba(53, 160, 238, 0.25);
     }
     &__skip {
+        margin-left: 16px;
         color: $button-link-font-color;
         background: rgba(53, 160, 238, 0.1);
     }
