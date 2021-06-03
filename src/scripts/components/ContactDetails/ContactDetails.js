@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 import Input from "../Input/Input";
 import Button from "../Button/Button";
@@ -7,17 +7,24 @@ import useForm from "../../hooks/useForm/useForm";
 import ValidationForm from "../../validation/validationForm";
 import { StepContext } from "../../context/StepContext";
 import { UserContext } from "../../context/UserContext";
+import Modal from "../Modal/Modal";
+import PrivacyPolicy from "../PrivacyPolicy/PrivacyPolicy";
 
 export default function ContactDetails() {
 
     const { handleChange, values, handleSubmit, errors } = useForm();
     const [step, setStep] = useContext(StepContext);
     const [user, setUser] = useContext(UserContext);
+    const [isOpen, setIsOpen] = useState(false);
 
     const validation = new ValidationForm();
 
     const nextStep = () => {
         setStep(step + 1);
+    }
+
+    const openCloseModal = () => {
+        setIsOpen(!isOpen);
     }
 
     return (
@@ -59,7 +66,11 @@ export default function ContactDetails() {
             <div className="contact__privacy flex flex-col">
                 <div className="privacy__title">{steps.stepPage[1].privacyTitle}</div>
                 <div className="privacy__caption">{steps.stepPage[1].privacyCaption}</div>
-                <Button typeClass="link" text="Expand Privacy Policy" arrow="left" />
+                <Button typeClass="link" text="Expand Privacy Policy" arrow="left" handleClick={openCloseModal}/>
+
+                <Modal open={isOpen} onClose={openCloseModal}>
+                    <PrivacyPolicy />
+                </Modal>
             </div>
         </div>
     )
