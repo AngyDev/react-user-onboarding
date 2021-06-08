@@ -21,13 +21,4 @@ export default function App() {
             </UserProvider>
         </StepContext.Provider>
     )
-
-    /*return (
-        <StepProvider>
-            <div className="app-container">
-                <Sidebar />
-                <Main />
-            </div>
-        </StepProvider>
-    )*/
 }
