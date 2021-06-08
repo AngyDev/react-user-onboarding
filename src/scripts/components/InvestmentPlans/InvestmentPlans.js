@@ -6,6 +6,7 @@ import useForm from "../../hooks/useForm/useForm";
 import ValidationForm from "../../validation/validationForm";
 import { StepContext } from "../../context/StepContext";
 import { UserContext } from "../../context/UserContext";
+import { useHistory } from "react-router";
 
 export default function InvestmentPlans() {
 
@@ -16,8 +17,11 @@ export default function InvestmentPlans() {
 
     const validation = new ValidationForm();
 
+    let history = useHistory();
+
     const nextStep = () => {
         setStep(step + 1);
+        history.push("/step3");
     }
 
     return (
