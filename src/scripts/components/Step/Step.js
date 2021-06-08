@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Route, Switch } from "react-router";
 import { StepContext } from "../../context/StepContext";
 import steps from "../../data/steps.json";
 import ContactDetails from "../ContactDetails/ContactDetails";
@@ -15,11 +16,11 @@ export default function Step() {
                 <div className="step__title">{steps.stepPage[step].title}</div>
                 <div className="step__caption">{steps.stepPage[step].caption}</div>
             </div>
-            <div>
-                { (step === 1) && <ContactDetails /> }
-                { (step === 2) && <InvestmentPlans />}
-                { (step === 3) && <InvestmentPreferences />}
-            </div>
+            <Switch>
+                <Route exact path="/" component={ContactDetails} />
+                <Route path="/step2" component={InvestmentPlans} />
+                <Route path="/step3" component={InvestmentPreferences} />
+            </Switch>
         </div>
     )
 }
