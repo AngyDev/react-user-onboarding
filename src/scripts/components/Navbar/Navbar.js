@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Button from "../Button/Button";
 import { StepContext } from "../../context/StepContext";
 import { UserContext } from "../../context/UserContext";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
 
@@ -28,9 +29,25 @@ export default function Navbar() {
 
     return (
         <div data-testid="navbar" name="navbar" className="flex justify-between align-center">
-            <Button typeClass="link" text="Back to the homepage" arrow="right" handleClick={backToHome} />
+            <Link to="/">
+                <Button typeClass="link" text="Back to the homepage" arrow="right" handleClick={backToHome} />
+            </Link>
             <div className="flex">
-                <Button typeClass="btn btn__skip pad" text="Skip for now" handleClick={skipStep} />
+                {(step === 1) &&
+                    <Link to="/step2">
+                        <Button typeClass="btn btn__skip pad" text="Skip for now" handleClick={skipStep} />
+                    </Link>
+                }
+                {(step === 2) &&
+                    <Link to="/step3">
+                        <Button typeClass="btn btn__skip pad" text="Skip for now" handleClick={skipStep} />
+                    </Link>
+                }
+                {(step === 3) &&
+                    <Link to="/step3">
+                        <Button typeClass="btn btn__skip pad" text="Skip for now" handleClick={skipStep} />
+                    </Link>
+                }
                 {
                     step === 3 ? <Button typeClass="btn btn__next" text="Finish" form="form-id" />
                         : <Button typeClass="btn btn__next" text="Next Step" arrow="left" form="form-id" />
