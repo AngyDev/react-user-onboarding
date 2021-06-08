@@ -9,6 +9,7 @@ import { StepContext } from "../../context/StepContext";
 import { UserContext } from "../../context/UserContext";
 import Modal from "../Modal/Modal";
 import PrivacyPolicy from "../PrivacyPolicy/PrivacyPolicy";
+import { useHistory } from "react-router";
 
 export default function ContactDetails() {
 
@@ -19,8 +20,11 @@ export default function ContactDetails() {
 
     const validation = new ValidationForm();
 
+    let history = useHistory();
+
     const nextStep = () => {
         setStep(step + 1);
+        history.push("/step2");
     }
 
     const openCloseModal = () => {

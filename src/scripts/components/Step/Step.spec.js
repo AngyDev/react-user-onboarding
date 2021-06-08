@@ -3,7 +3,7 @@ import { render, cleanup, screen } from "@testing-library/react";
 import { StepContext } from "../../context/StepContext";
 import '@testing-library/jest-dom';
 import Step from "./Step";
-
+import { MemoryRouter } from "react-router";
 
 describe("Step test", () => {
 
@@ -13,9 +13,18 @@ describe("Step test", () => {
      * @returns The render of the Step component with the usage of the context value
      */
     function renderStep(step) {
+        let path = "/";
+        if (step === 2) {
+            path = "/step2";
+        } else if (step === 3) {
+            path = "/step3";
+        }
+
         return render(
             <StepContext.Provider value={[step]}>
-                <Step />
+                <MemoryRouter initialEntries={[path]}>
+                    <Step />
+                </MemoryRouter>
             </StepContext.Provider>
         );
     }

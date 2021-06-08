@@ -3,9 +3,10 @@ import { render, cleanup, screen } from "@testing-library/react";
 import { StepContext } from "../../context/StepContext";
 import '@testing-library/jest-dom';
 import Main from "./Main";
+import { MemoryRouter } from "react-router";
 
 
-describe("Navbar test", () => {
+describe("Main test", () => {
 
     /**
      * Render the main component
@@ -15,7 +16,9 @@ describe("Navbar test", () => {
     function renderMain(step) {
         return render(
             <StepContext.Provider value={[step]}>
-                <Main />
+                <MemoryRouter>
+                    <Main />
+                </MemoryRouter>
             </StepContext.Provider>
         );
     }
