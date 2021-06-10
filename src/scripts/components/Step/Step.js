@@ -6,7 +6,7 @@ import ContactDetails from "../ContactDetails/ContactDetails";
 import InvestmentPlans from "../InvestmentPlans/InvestmentPlans";
 import InvestmentPreferences from "../InvestmentPreferences/InvestmentPreferences";
 
-export default function Step() {
+export default function Step({children}) {
 
     const [step, setStep] = useContext(StepContext);
 
@@ -16,11 +16,7 @@ export default function Step() {
                 <div className="step__title">{steps.stepPage[step].title}</div>
                 <div className="step__caption">{steps.stepPage[step].caption}</div>
             </div>
-            <Switch>
-                <Route exact path="/" component={ContactDetails} />
-                <Route path="/step2" component={InvestmentPlans} />
-                <Route path="/step3" component={InvestmentPreferences} />
-            </Switch>
+            {children}
         </div>
     )
 }
