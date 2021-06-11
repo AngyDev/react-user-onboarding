@@ -25,14 +25,8 @@ describe("Navbar test", () => {
 
     afterEach(cleanup);
 
-    it("should render two button component", () => {
-        renderNavbar(null);
-
-        expect(screen.queryAllByTestId("button")).toHaveLength(2);
-    });
-
     it("should render three button component", () => {
-        renderNavbar(1);
+        renderNavbar(null);
 
         expect(screen.queryAllByTestId("button")).toHaveLength(3);
     });
