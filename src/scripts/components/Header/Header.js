@@ -36,9 +36,9 @@ export default function Header() {
             {
                 step === 1 &&
                 <div>
-                    <select value={translation.language} onChange={handleTranslation}>
-                        <option value="it">Italiano</option>
+                    <select className="select" value={translation.language} onChange={handleTranslation}>
                         <option value="en">English</option>
+                        <option value="it">Italiano</option>
                     </select>
                 </div>
             }
