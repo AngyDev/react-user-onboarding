@@ -1,6 +1,8 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import InvestmentPreferences from "./InvestmentPreferences";
+import { TranslationContext } from "../../context/TranslationContext";
+import translations from "../../translations/translations.json";
 
 describe("Investment preferences test", () => {
 
@@ -10,7 +12,9 @@ describe("Investment preferences test", () => {
     */
     function renderInvestmentPreferences() {
         return render(
-            <InvestmentPreferences />
+            <TranslationContext.Provider value={[translations.english]}>
+                <InvestmentPreferences />
+            </TranslationContext.Provider>
         );
     }
 
