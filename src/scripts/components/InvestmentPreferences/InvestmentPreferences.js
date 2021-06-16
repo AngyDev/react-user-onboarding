@@ -4,7 +4,7 @@ import Validation from "../../validation/validationForm";
 import { UserContext } from "../../context/UserContext";
 import ValidationUser from "../../validation/validationUser";
 import useForm from "../../hooks/useForm/useForm";
-import { preferences } from "../../data/preferences";
+import { TranslationContext } from "../../context/TranslationContext";
 
 export default function InvestmentPreferences() {
 
@@ -16,66 +16,22 @@ export default function InvestmentPreferences() {
     const [userErrors, setUserErrors] = useState({});
 
     const [user, setUser] = useContext(UserContext);
+    const [translation] = useContext(TranslationContext);
 
-    const initialState = [
-        {
-            value: "Single Family",
-            isChecked: false
-        },
-        {
-            value: "Residential multifamily",
-            isChecked: false
-        },
-        {
-            value: "Commercial retail",
-            isChecked: false
-        },
-        {
-            value: "Commercial industrial",
-            isChecked: false
-        },
-        {
-            value: "Commercial hospitality",
-            isChecked: false
-        },
-        {
-            value: "Commercial warehousing",
-            isChecked: false
-        },
-        {
-            value: "Commercial office",
-            isChecked: false
-        },
-        {
-            value: "Other",
-            isChecked: false
-        }
-    ];
-    const [pref, setPref] = useState(preferences);
+    const [prefChecked, setPrefChecked] = useState([]);
 
-    /**
-     * Checks if the preferences are selected and change the value in the chekboxes
-     */
-    /*useEffect(() => {
-        user.preferences && user.preferences.forEach(element => {
-            setPref(pref.map(item => {
-                if (item.value === element) {
-                    item.isChecked = true;
-                }
-                return item;
-            }));
-        });
-    }, []);*/
+    useEffect(() => {
+        setPrefChecked(user.preferences);
+    }, []);
 
     const handleClick = (e) => {
         const { value, checked } = e.target;
 
-        setPref(pref.map(item => {
-            if (item.value === value) {
-                item.isChecked = checked;
-            }
-            return item;
-        }));
+        if (checked) {
+            setPrefChecked([...prefChecked, value]);
+        } else {
+            setPrefChecked(prefChecked.filter(item => item !== value));
+        }
     }
 
     const validateAndSubmit = async () => {
@@ -131,29 +87,36 @@ export default function InvestmentPreferences() {
             radio: "",
             preferences: []
         });
-        setPref(pref.map(item => {
-            item.isChecked = false;
-            return item;
-        }));
     }
 
     return (
         <div data-testid="investment-preferences">
             <form id="form-id" onSubmit={(e) => handleSubmit(e, validation.validateInvestmentPreferences(user.preferences), validateAndSubmit)}>
                 <div className="pref__row flex flex-row justify-between">
-                    {
+                    {/*
                         pref.map((item, i) => {
                             if (i <= 3) {
                                 return <Checkbox key={i} label={item.value} value={item.value} name="preferences" onChange={(e) => handleChange(e, "array")} onClick={handleClick} checked={item.isChecked} />
+                            }
+                        })
+                    */}
+                    {
+                        translation.checkboxes.map((item, i) => {
+                            let checkedC = prefChecked.includes(item);
+
+                            if (i <= 3) {
+                                return <Checkbox key={i} label={item} value={item} name="preferences" onChange={(e) => handleChange(e, "array")} onClick={handleClick} checked={checkedC} />
                             }
                         })
                     }
                 </div>
                 <div className="pref__row flex flex-row justify-between">
                     {
-                        pref.map((item, i) => {
+                        translation.checkboxes.map((item, i) => {
+                            let checkedC = prefChecked.includes(item);
+
                             if (i > 3) {
-                                return <Checkbox key={i} label={item.value} value={item.value} name="preferences" onChange={(e) => handleChange(e, "array")} onClick={handleClick} checked={item.isChecked} />
+                                return <Checkbox key={i} label={item} value={item} name="preferences" onChange={(e) => handleChange(e, "array")} onClick={handleClick} checked={checkedC} />
                             }
                         })
                     }

@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react';
+import { TranslationContext } from '../../context/TranslationContext';
 
 
 export default function PriceInput(props) {
 
     const [isEditing, setIsEditing] = useState(false);
+    const [translation] = useContext(TranslationContext);
 
-    const formatter = new Intl.NumberFormat('en-US', {
+    const formatter = new Intl.NumberFormat(translation.locales, {
         style: 'currency',
-        currency: 'USD',
+        currency: translation.currency,
     });
 
     const toggleEditing = () => {
