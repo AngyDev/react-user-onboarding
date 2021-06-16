@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { TranslationContext } from "../../context/TranslationContext";
 
 export default function PriceSlider(props) {
 
     const [prices] = useState([10000, 50000, 100000, 200000, 500000, 1000000]);
     const [startBar, setStartBar] = useState(0);
     const [endBar, setEndBar] = useState(1);
+    const [translation] = useContext(TranslationContext);
 
     useEffect(() => {
         prices.forEach((item, i) => {
@@ -18,9 +20,9 @@ export default function PriceSlider(props) {
         });
     });
 
-    const formatter = new Intl.NumberFormat('en-US', {
+    const formatter = new Intl.NumberFormat(translation.locales, {
         style: 'currency',
-        currency: 'USD',
+        currency: translation.currency,
     });
 
     return (

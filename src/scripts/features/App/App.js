@@ -3,6 +3,7 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import Main from "../../components/Main/Main";
 import { StepContext } from "../../context/StepContext";
 import { UserProvider } from "../../context/UserContext";
+import { TranslationProvider } from "../../context/TranslationContext";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import ContactDetails from "../../components/ContactDetails/ContactDetails";
@@ -15,21 +16,23 @@ export default function App() {
 
     return (
         <StepContext.Provider value={[step, setStep]}>
-            <UserProvider >
-                <BrowserRouter>
-                    <Switch>
-                        <Route exact path="/">
-                            <Layout><ContactDetails /></Layout>
-                        </Route>
-                        <Route path="/step2">
-                            <Layout><InvestmentPlans /></Layout>
-                        </Route>
-                        <Route path="/step3">
-                            <Layout><InvestmentPreferences /></Layout>
-                        </Route>
-                    </Switch>
-                </BrowserRouter>
-            </UserProvider>
+            <TranslationProvider>
+                <UserProvider >
+                    <BrowserRouter>
+                        <Switch>
+                            <Route exact path="/">
+                                <Layout><ContactDetails /></Layout>
+                            </Route>
+                            <Route path="/step2">
+                                <Layout><InvestmentPlans /></Layout>
+                            </Route>
+                            <Route path="/step3">
+                                <Layout><InvestmentPreferences /></Layout>
+                            </Route>
+                        </Switch>
+                    </BrowserRouter>
+                </UserProvider>
+            </TranslationProvider>
         </StepContext.Provider>
     )
 }

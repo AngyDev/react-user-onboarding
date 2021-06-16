@@ -1,0 +1,152 @@
+{
+    "italian": {
+        "language": "it",
+        "header": {
+            "page": [
+                "PASSO",
+                "DI 3"
+            ],
+            "text": "Ti sei perso o hai problemi?",
+            "helpBtn": "Chiedi aiuto"
+        },
+        "quotes": {
+            "1": {
+                "text": "Ci preoccupiamo del tuo tempo, ecco perché abbiamo creato un onboarding in 3 fasi che non richiede più di 5 minuti per essere completato",
+                "authorName": "William Mac",
+                "authorRole": "Co-founder, Investor"
+            },
+            "2": {
+                "text": "Risparmia da migliaia a milioni sul tuo affare. Assicurati il meglio possibile. E ottieni una consulenza indipendente e imparziale gratuitamente",
+                "authorName": "Jodie Sears",
+                "authorRole": "UNITEDPROPERTIES’ AGENT"
+            },
+            "3": {
+                "text": "United Properties riguarda la ricerca veloce e facile, l'acquisto, la vendita e l'investimento di sempre - online, con un esperto al nostro fianco",
+                "authorName": "Ollie Mcmahon",
+                "authorRole": "MANAGING DIRECTOR"
+            }
+        },
+        "stepTitles": [
+            "Dettagli del contatto",
+            "Piani di investimento",
+            "Preferenze di investimento"
+        ],
+        "1": {
+            "title": "Dettagli del contatto",
+            "caption": "Benvenuto in United Properties, siamo lieti di vederti! Iniziamo con il farci conoscere un po' di te",
+            "formName": "Nome completo",
+            "formPhone": "Telefono",
+            "formEmail": "Indirizzo mail",
+            "formCountry": "Nazione",
+            "formCountryOption": ["Italia", "Inghilterra", "Francia", "Germania", "Spagna"],
+            "privacyTitle": "Privacy policy",
+            "privacyCaption": "Sappiamo che ti preoccupi di come le tue informazioni personali vengono utilizzate e condivise, quindi prendiamo sul serio la tua privacy",
+            "privacyBtn": "Espandi le Privacy Policy"
+        },
+        "2": {
+            "title": "Piani di investimento",
+            "caption": "Questo ci aiuterà a capire quali sono le tue opzioni di investimento in modo da poterti mostrare solo eventuali offerte interessanti per te",
+            "question": ["Quanto hai intenzione di investire questo anno?", "Sei un investitore accreditato"],
+            "input": ["da", "a", "Si", "No"]
+        },
+        "3": {
+            "title": "Preferenze di investimento",
+            "caption": "Facci sapere i tuoi piani di investimento. Questo ci aiuterà a indirizzarti dal giusto esperto che ti aiuterà ulteriormente"
+        },
+        "btn": {
+            "backBtn": "Torna alla pagina principale",
+            "skipBtn": "Salta per ora",
+            "nextBtn": "Prossimo step",
+            "finishBtn": "Finito"
+        },
+        "locales":"it-IT",
+        "currency":"EUR",
+        "checkboxes": ["Singola famiglia", "Multifamiliare residenziale", "Vendita al dettaglio commerciale", "Commerciale industriale", "Ospitalità Commerciale", "Magazzino Commerciale", "Ufficio Commerciale", "Altro"],
+        "errors": {
+            "name": "Il nome è obbligatorio",
+            "phone": "Inserire un telefono valido",
+            "email": "Inserire una email valida",
+            "country": "La nazione è obbligatoria",
+            "from": "Da è obbligatorio",
+            "to": "A è obbligatorio",
+            "radio": "La risposta è obbligatoria",
+            "check": "La risposta è obbligatoria",
+            "user": "Alcune risposte sono mancanti, tornare alla pagina principale"
+        }
+    },
+    "english": {
+        "language": "en",
+        "header": {
+            "page": [
+                "STEP",
+                "OF 3"
+            ],
+            "text": "Lost or have trouble?",
+            "helpBtn": "Get help"
+        },
+        "quotes": {
+            "1": {
+                "text": "We care about your time, that's why we created a 3-stage onboarding that will not take more than 5 minutes to complete",
+                "authorName": "William Mac",
+                "authorRole": "Co-founder, Investor"
+            },
+            "2": {
+                "text": "Save from thousands to millions on your deal. Secure the best possible. And get independent, unbiased advice for free",
+                "authorName": "Jodie Sears",
+                "authorRole": "UNITEDPROPERTIES’ AGENT"
+            },
+            "3": {
+                "text": "United Properties is about fast & easy searching, buying, selling and investing ever — online, with an expert by our side",
+                "authorName": "Ollie Mcmahon",
+                "authorRole": "MANAGING DIRECTOR"
+            }
+        },
+        "stepTitles": [
+            "Contact details",
+            "Investment plans",
+            "Investment preferences"
+        ],
+        "1": {
+            "title": "Contact details",
+            "caption": "Welcome to United Properties, we are glad to see you! Let’s get started by letting us know a little bit about you",
+            "formName": "Full name",
+            "formPhone": "Phone",
+            "formEmail": "Email address",
+            "formCountry": "Country",
+            "formCountryOption": ["Italy", "England", "France", "Germany", "Spain"],
+            "privacyTitle": "Privacy policy",
+            "privacyCaption": "We know you care about how your personal information is used and shared, so we take your privacy seriously",
+            "privacyBtn": "Expand Privacy Policy"
+        },
+        "2": {
+            "title": "Investment plans",
+            "caption": "This will help us figure out what your investment options are so that we can show you only possibly interesting for you deals",
+            "question": ["How much are you planning to invest in this year?", "Are you an accredited investor?"],
+            "input": ["from", "to", "Yes", "No"]
+        },
+        "3": {
+            "title": "Investment preferences",
+            "caption": "Let us know about your investment plans. This will help us get you to the right expert who will help you further"
+        },
+        "btn": {
+            "backBtn": "Back to the homepage",
+            "skipBtn": "Skip for now",
+            "nextBtn": "Next Step",
+            "finishBtn": "Finish"
+        },
+        "locales":"en-US",
+        "currency":"USD",
+        "checkboxes": ["Single Family", "Residential multifamily", "Commercial retail", "Commercial industrial", "Commercial hospitality", "Commercial warehousing", "Commercial office", "Other"],
+        "errors": {
+            "name": "Name is required",
+            "phone": "Enter a valid phone",
+            "email": "Enter a valid email",
+            "country": "Country is required",
+            "from": "From is required",
+            "to": "To is required",
+            "radio": "Answer is required",
+            "check": "Answer is required",
+            "user": "Some inputs are missed, back to the homepage"
+        }
+    }
+}

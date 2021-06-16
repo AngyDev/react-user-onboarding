@@ -2,6 +2,8 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import PriceInput from "./PriceInput";
 import { act } from "react-dom/test-utils";
+import { TranslationContext } from "../../context/TranslationContext";
+import translations from "../../translations/translations.json";
 
 describe("Price input test component", () => {
 
@@ -9,7 +11,11 @@ describe("Price input test component", () => {
 
     it("should render the input label name", () => {
         act(() => {
-            render(<PriceInput label="From" />);
+            render(
+                <TranslationContext.Provider value={[translations.english]}>
+                    <PriceInput label="From" />
+                </TranslationContext.Provider>
+            );
         });
 
         expect(screen.getByTestId("price-input").textContent).toBe("From");
