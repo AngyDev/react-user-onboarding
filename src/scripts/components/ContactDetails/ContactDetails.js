@@ -40,16 +40,16 @@ export default function ContactDetails() {
                 <div className="form__item flex flex-row justify-between">
                     <div className="form__name col-2">
                         <Input inputName="name" label={translation.[step].formName} type="text" value={values.name} onChange={handleChange} />
-                        {errors.name && <span className="form__error">{errors.name}</span>}
+                        {errors.name && <span className="form__error">{translation.errors.name}</span>}
                     </div>
                     <div className="col-2">
                         <Input inputName="phone" label={translation.[step].formPhone} type="tel" value={values.phone} onChange={handleChange} />
-                        {errors.phone && <span className="form__error">{errors.phone}</span>}
+                        {errors.phone && <span className="form__error">{translation.errors.phone}</span>}
                     </div>
                 </div>
                 <div className="form__item">
                     <Input inputName="email" label={translation.[step].formEmail} type="email" value={values.email} onChange={handleChange} />
-                    {errors.email && <span className="form__error">{errors.email}</span>}
+                    {errors.email && <span className="form__error">{translation.errors.email}</span>}
                 </div>
                 <div>
                     <label htmlFor="country" className="form__label flex flex-col">{translation.[step].formCountry}</label>
@@ -62,7 +62,7 @@ export default function ContactDetails() {
                         <option value=""></option>
                         {translation.[step].formCountryOption.map((country,i) => <option key={i} value={country}>{country}</option>)}
                     </select>
-                    {errors.country && <span className="form__error">{errors.country}</span>}
+                    {errors.country && <span className="form__error">{translation.errors.country}</span>}
                 </div>
             </form>
 

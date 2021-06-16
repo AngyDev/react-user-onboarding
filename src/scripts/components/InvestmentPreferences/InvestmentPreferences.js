@@ -53,7 +53,7 @@ export default function InvestmentPreferences() {
 
             loading.innerHTML = "The user has been saved " + JSON.stringify(user);
         } else {
-            setUserErrors({ user: "Some inputs are missed, back to the homepage" });
+            setUserErrors({ user: translation.errors.user });
         }
     }
 
@@ -121,7 +121,7 @@ export default function InvestmentPreferences() {
                         })
                     }
                 </div>
-                {errors.check && <span className="form__error">{errors.check}</span>}
+                {errors.check && <span className="form__error">{translation.errors.check}</span>}
             </form>
             <div id="loading" className="loading">Loading...</div>
             {userErrors.user && <span className="form__error">{userErrors.user}</span>}

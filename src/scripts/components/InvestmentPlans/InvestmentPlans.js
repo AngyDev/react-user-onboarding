@@ -34,11 +34,11 @@ export default function InvestmentPlans() {
                 <div className="form__item flex flex-row justify-between">
                     <div className="form__name col-2">
                         <PriceInput name="from" min="10000" max="500000" label={translation.[step].input[0]} value={values.from} onChange={handleChange} />
-                        {errors.from && <span className="form__error">{errors.from}</span>}
+                        {errors.from && <span className="form__error">{translation.errors.from}</span>}
                     </div>
                     <div className="col-2">
                         <PriceInput name="to" min="50000" label={translation.[step].input[1]} value={values.to} onChange={handleChange} />
-                        {errors.to && <span className="form__error">{errors.to}</span>}
+                        {errors.to && <span className="form__error">{translation.errors.to}</span>}
                     </div>
                 </div>
                 <div className="form__item">
@@ -50,7 +50,7 @@ export default function InvestmentPlans() {
                         <Radiobox labelFor="yes" label={translation.[step].input[2]} name="radio" value={true} checked={values.radio === "true"} handleChange={handleChange} />
                         <Radiobox labelFor="no" label={translation.[step].input[3]} name="radio" value={false} checked={values.radio === "false"} handleChange={handleChange} />
                     </div>
-                    {errors.radio && <span className="form__error">{errors.radio}</span>}
+                    {errors.radio && <span className="form__error">{translation.errors.radio}</span>}
                 </div>
             </form>
         </div>
