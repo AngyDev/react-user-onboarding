@@ -61,7 +61,18 @@
         },
         "locales":"it-IT",
         "currency":"EUR",
-        "checkboxes": ["Singola famiglia", "Multifamiliare residenziale", "Vendita al dettaglio commerciale", "Commerciale industriale", "Ospitalità Commerciale", "Magazzino Commerciale", "Ufficio Commerciale", "Altro"]
+        "checkboxes": ["Singola famiglia", "Multifamiliare residenziale", "Vendita al dettaglio commerciale", "Commerciale industriale", "Ospitalità Commerciale", "Magazzino Commerciale", "Ufficio Commerciale", "Altro"],
+        "errors": {
+            "name": "Il nome è obbligatorio",
+            "phone": "Inserire un telefono valido",
+            "email": "Inserire una email valida",
+            "country": "La nazione è obbligatoria",
+            "from": "Da è obbligatorio",
+            "to": "A è obbligatorio",
+            "radio": "La risposta è obbligatoria",
+            "check": "La risposta è obbligatoria",
+            "user": "Alcune risposte sono mancanti, tornare alla pagina principale"
+        }
     },
     "english": {
         "language": "en",
@@ -125,6 +136,17 @@
         },
         "locales":"en-US",
         "currency":"USD",
-        "checkboxes": ["Single Family", "Residential multifamily", "Commercial retail", "Commercial industrial", "Commercial hospitality", "Commercial warehousing", "Commercial office", "Other"]
+        "checkboxes": ["Single Family", "Residential multifamily", "Commercial retail", "Commercial industrial", "Commercial hospitality", "Commercial warehousing", "Commercial office", "Other"],
+        "errors": {
+            "name": "Name is required",
+            "phone": "Enter a valid phone",
+            "email": "Enter a valid email",
+            "country": "Country is required",
+            "from": "From is required",
+            "to": "To is required",
+            "radio": "Answer is required",
+            "check": "Answer is required",
+            "user": "Some inputs are missed, back to the homepage"
+        }
     }
 }
