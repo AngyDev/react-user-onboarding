@@ -7,6 +7,8 @@
 ![jest](https://img.shields.io/badge/jest-26.6.3-green?logo=jest)
 ![Website](https://img.shields.io/badge/web--site-up-green)
 
+Stable Version v0.1.0
+
 ## Demo
 
 https://react-user-onboarding.netlify.app/
