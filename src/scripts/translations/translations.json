@@ -58,7 +58,10 @@
             "skipBtn": "Salta per ora",
             "nextBtn": "Prossimo step",
             "finishBtn": "Finito"
-        }
+        },
+        "locales":"it-IT",
+        "currency":"EUR",
+        "checkboxes": ["Singola famiglia", "Multifamiliare residenziale", "Vendita al dettaglio commerciale", "Commerciale industriale", "Ospitalità Commerciale", "Magazzino Commerciale", "Ufficio Commerciale", "Altro"]
     },
     "english": {
         "language": "en",
@@ -119,6 +122,9 @@
             "skipBtn": "Skip for now",
             "nextBtn": "Next Step",
             "finishBtn": "Finish"
-        }
+        },
+        "locales":"en-US",
+        "currency":"USD",
+        "checkboxes": ["Single Family", "Residential multifamily", "Commercial retail", "Commercial industrial", "Commercial hospitality", "Commercial warehousing", "Commercial office", "Other"]
     }
 }
