@@ -7,7 +7,7 @@
 ![jest](https://img.shields.io/badge/jest-26.6.3-green?logo=jest)
 ![Website](https://img.shields.io/badge/web--site-up-green)
 
-Stable Version v0.1.0
+### Stable Version v0.1.0
 
 ## Demo
 
@@ -21,6 +21,7 @@ https://react-user-onboarding.netlify.app/
 * [Features](#features)
 * [Requirements](#requirements)
 * [Setup](#setup)
+* [Versions](#versions)
 
 ## General info
 
@@ -70,3 +71,13 @@ npm run test
 # run the test coverage
 npm run test-coverage 
 ```
+
+## Versions
+
+<strong style="color: yellow; opacity: 0.80;">v0.1.0</strong>
+
+The main features of this version are:
+- **custom hooks** used to handle the forms of the application
+- **modal** simple usage to see some information of the application
+- **react context** to pass global information as step and user. The step is used to change the information on the page between the steps. The object user is global because I can maintain the information of the forms until the end of the steps. 
+- **react router** there are three pages, homepage, setp2 and step3
