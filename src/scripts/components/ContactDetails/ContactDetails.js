@@ -1,8 +1,6 @@
 import React, { useContext, useState } from "react";
-
 import Input from "../Input/Input";
 import Button from "../Button/Button";
-import steps from "../../data/steps.json";
 import useForm from "../../hooks/useForm/useForm";
 import ValidationForm from "../../validation/validationForm";
 import { StepContext } from "../../context/StepContext";
