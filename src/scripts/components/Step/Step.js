@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { StepContext } from "../../context/StepContext";
 import { TranslationContext } from "../../context/TranslationContext";
-import steps from "../../data/steps.json";
 
 export default function Step({children}) {
 
