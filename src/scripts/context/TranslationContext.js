@@ -4,7 +4,10 @@ import translations from "../translations/translations.json";
 const TranslationContext = React.createContext({});
 
 function TranslationProvider({ children }) {
-    const [translation, setTranslation] = useState(translations.english);
+    // If it is the first time or if the user dosn't choose the language, english is the default
+    const language = localStorage.language ? translations[localStorage.language] : translations.english;
+
+    const [translation, setTranslation] = useState(language);
 
     return (
         <TranslationContext.Provider value={[translation, setTranslation]}>

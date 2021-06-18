@@ -21,7 +21,7 @@ export default function InvestmentPreferences() {
     const [prefChecked, setPrefChecked] = useState([]);
 
     useEffect(() => {
-        setPrefChecked(user.preferences);
+        user.preferences && setPrefChecked(user.preferences);
     }, []);
 
     const handleClick = (e) => {
@@ -102,7 +102,7 @@ export default function InvestmentPreferences() {
                     */}
                     {
                         translation.checkboxes.map((item, i) => {
-                            let checkedC = prefChecked.includes(item);
+                            const checkedC = prefChecked.includes(item);
 
                             if (i <= 3) {
                                 return <Checkbox key={i} label={item} value={item} name="preferences" onChange={(e) => handleChange(e, "array")} onClick={handleClick} checked={checkedC} />
@@ -113,7 +113,7 @@ export default function InvestmentPreferences() {
                 <div className="pref__row flex flex-row justify-between">
                     {
                         translation.checkboxes.map((item, i) => {
-                            let checkedC = prefChecked.includes(item);
+                            const checkedC = prefChecked.includes(item);
 
                             if (i > 3) {
                                 return <Checkbox key={i} label={item} value={item} name="preferences" onChange={(e) => handleChange(e, "array")} onClick={handleClick} checked={checkedC} />

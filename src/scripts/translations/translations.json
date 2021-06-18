@@ -1,6 +1,5 @@
 {
     "italian": {
-        "language": "it",
         "header": {
             "page": [
                 "PASSO",
@@ -75,7 +74,6 @@
         }
     },
     "english": {
-        "language": "en",
         "header": {
             "page": [
                 "STEP",

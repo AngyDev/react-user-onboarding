@@ -23,12 +23,13 @@ export default function Header() {
     const handleTranslation = (e) => {
         const { value } = e.target;
 
-        if (value === "it") {
-            setTranslation(translations.italian);
-        } else {
-            setTranslation(translations.english);
-        }
+        localStorage.setItem("language", value);
+
+        setTranslation(translations[localStorage.language]);
+
     }
+
+    //console.log(localStorage);
 
     return (
         <div data-testid="header" name="header" className="header flex justify-between align-center">
@@ -36,9 +37,9 @@ export default function Header() {
             {
                 step === 1 &&
                 <div>
-                    <select className="select" value={translation.language} onChange={handleTranslation}>
-                        <option value="en">English</option>
-                        <option value="it">Italiano</option>
+                    <select className="select" value={localStorage.language} onChange={handleTranslation}>
+                        <option value="english">English</option>
+                        <option value="italian">Italiano</option>
                     </select>
                 </div>
             }
