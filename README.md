@@ -6,6 +6,7 @@
 ![sass](https://img.shields.io/badge/sass-1.32.8-green?logo=sass)
 ![jest](https://img.shields.io/badge/jest-26.6.3-green?logo=jest)
 ![Website](https://img.shields.io/badge/web--site-up-green)
+![Postgres](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
 
 ### Stable Version v0.1.0
 
