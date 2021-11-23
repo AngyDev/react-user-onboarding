@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server to integrate postgres to the client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node src/index.js",
+    "knex": "knex --knexfile ./src/utils/knexfile.js",
+    "migrate-local-db": "export NODE_ENV='local' && cd src/utils && knex migrate:latest"
+  },
+  "keywords": [
+    "postgres"
+  ],
+  "author": "Angela Busato",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "knex": "^0.95.14",
+    "nodemon": "^2.0.15",
+    "objection": "^3.0.0",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/preset-env": "^7.16.4"
+  }
+}
