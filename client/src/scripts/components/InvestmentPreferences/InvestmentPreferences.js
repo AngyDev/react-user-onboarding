@@ -5,6 +5,7 @@ import { UserContext } from "../../context/UserContext";
 import ValidationUser from "../../validation/validationUser";
 import useForm from "../../hooks/useForm/useForm";
 import { TranslationContext } from "../../context/TranslationContext";
+import { saveUser } from "../../utils/api";
 
 export default function InvestmentPreferences() {
 
@@ -41,7 +42,9 @@ export default function InvestmentPreferences() {
             loading.classList.add("display");
 
             try {
-                const response = await postData();
+                // const response = await postData();
+
+                const response = await saveUser(user);
 
                 resetUser();
 
@@ -56,25 +59,27 @@ export default function InvestmentPreferences() {
             setUserErrors({ user: translation.errors.user });
         }
     }
+    /**
+     * Old version without server implementation
+     */
+    // const postData = async () => {
 
-    const postData = async () => {
+    //     const requestOptions = {
+    //         method: 'POST',
+    //         headers: { 'Content-Type': 'application/json' },
+    //         body: JSON.stringify(user)
+    //     };
 
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(user)
-        };
+    //     try {
+    //         const response = await fetch('https://e3c711b4-41bb-4b0b-b1b5-944550274dc9.mock.pstmn.io/v1/user', requestOptions);
+    //         const data = await response.json();
 
-        try {
-            const response = await fetch('https://e3c711b4-41bb-4b0b-b1b5-944550274dc9.mock.pstmn.io/v1/user', requestOptions);
-            const data = await response.json();
-
-            return Promise.resolve(data);
-        } catch (error) {
-            console.log(error);
-            return Promise.reject(error);
-        }
-    }
+    //         return Promise.resolve(data);
+    //     } catch (error) {
+    //         console.log(error);
+    //         return Promise.reject(error);
+    //     }
+    // }
 
     const resetUser = () => {
         setUser({
@@ -93,13 +98,6 @@ export default function InvestmentPreferences() {
         <div data-testid="investment-preferences">
             <form id="form-id" onSubmit={(e) => handleSubmit(e, validation.validateInvestmentPreferences(user.preferences), validateAndSubmit)}>
                 <div className="pref__row flex flex-row justify-between">
-                    {/*
-                        pref.map((item, i) => {
-                            if (i <= 3) {
-                                return <Checkbox key={i} label={item.value} value={item.value} name="preferences" onChange={(e) => handleChange(e, "array")} onClick={handleClick} checked={item.isChecked} />
-                            }
-                        })
-                    */}
                     {
                         translation.checkboxes.map((item, i) => {
                             const checkedC = prefChecked.includes(item);

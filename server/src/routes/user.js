@@ -26,7 +26,7 @@ router.get("/user/:id", async (req, res) => {
 router.post("/user", async (req, res) => {
     try {
         const user = req.body;
-        const createUsernewUser = await UserController.createUser(user);
+        const createUser = await UserController.createUser(user);
         return res.status(200).json(createUser);
     } catch (error) {
         console.error(error);

@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { getUsers } from "../utils/api";
 
 // Added an array to test the components that use the context
 const UserContext = React.createContext([{}, function () { }]);
 
 function UserProvider({ children }) {
+
+    useEffect(() => {
+        getUsers().then(response => console.log(response));
+    }, []);
+
     const [user, setUser] = useState({
         name: "",
         phone: "",
