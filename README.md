@@ -13,7 +13,7 @@
 
 https://react-user-onboarding.netlify.app/
 
-![Consultant](src/images/user-onboarding.png)
+![Consultant](client/src/images/user-onboarding.png)
 
 ## Table of Contents
 * [Demo](#demo)
