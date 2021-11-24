@@ -8,7 +8,7 @@
 ![Website](https://img.shields.io/badge/web--site-up-green)
 ![Postgres](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
 
-### Stable Version v0.1.0
+### Stable Version v0.2.0
 
 ## Demo
 
@@ -18,7 +18,7 @@ https://react-user-onboarding.netlify.app/
 
 ## Table of Contents
 - [User Onboarding](#user-onboarding)
-    - [Stable Version v0.1.0](#stable-version-v010)
+    - [Stable Version v0.2.0](#stable-version-v020)
   - [Demo](#demo)
   - [Table of Contents](#table-of-contents)
   - [General info](#general-info)
@@ -73,6 +73,15 @@ The user has to compile the form in three steps, in each step there is the valid
 [Backend README](https://github.com/AngyDev/react-user-onboarding/tree/main/server/README.md)
 
 ## Versions
+
+<strong style="color: yellow; opacity: 0.80;">v0.2.0</strong>
+
+The main features of this version are:
+
+- **server** folder
+- **database** creation and connection. The possibility for the application to save the data on the DB
+- **api** created in the frontend to call the backend application
+- **translation** the possibility to use the application in Italian and English languages
 
 <strong style="color: yellow; opacity: 0.80;">v0.1.0</strong>
 
