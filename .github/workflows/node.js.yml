@@ -10,12 +10,10 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
+  job1:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: client
+    env:
+        working-directory: ./client
 
     strategy:
       matrix:
@@ -33,6 +31,8 @@ jobs:
         
     - name: Install dependencies
       run: npm install
+      working-directory: ${{env.working-directory}}
 
     - name: Run the tests
       run: npm test -- --coverage
+      working-directory: ${{env.working-directory}}
