@@ -13,7 +13,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     env:
-        working-directory: ./server
+        working-directory: ./client
 
     strategy:
       matrix:
