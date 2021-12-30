@@ -21,8 +21,10 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+    - name: Checkout code
     - uses: actions/checkout@v2
     
+    - name: Cache path
     - uses: actions/cache@v2
       with:
         path: ~/.npm
