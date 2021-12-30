@@ -21,21 +21,21 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: Checkout code
-    - uses: actions/checkout@v2
-    
-    - name: Cache path
-    - uses: actions/cache@v2
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
-        
-    - name: Install dependencies
-      run: npm install
-      working-directory: ${{env.working-directory}}
+      - name: Checkout code
+      - uses: actions/checkout@v2
 
-    - name: Run the tests
-      run: npm test -- --coverage
-      working-directory: ${{env.working-directory}}
+      - name: Cache path
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ${{env.working-directory}}
+
+      - name: Run the tests
+        run: npm test -- --coverage
+        working-directory: ${{env.working-directory}}
