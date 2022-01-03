@@ -46,7 +46,7 @@
     }
 
     &__role {
-      @extend %fontMontBasee;
+      @extend %fontMontBase;
 
       color: $quote-text-color;
       font-size: $font-size-xs;

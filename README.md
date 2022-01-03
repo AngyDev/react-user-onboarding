@@ -7,6 +7,7 @@
 ![jest](https://img.shields.io/badge/jest-26.6.3-green?logo=jest)
 ![Website](https://img.shields.io/badge/web--site-up-green)
 ![Postgres](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
+![GitHub Super-Linter](https://github.com/<OWNER>/<REPOSITORY>/workflows/Super-Linter/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
 ### Stable Version v0.2.0
 

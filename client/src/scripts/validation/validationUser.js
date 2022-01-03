@@ -1,15 +1,15 @@
 export default class ValidationUser {
 
-    /**
-     * Validates if the user object has empty fields
-     * @param {Object} user 
-     * @returns Boolean
-     */
-    validateUser(user) {
+  /**
+   * Validates if the user object has empty fields
+   * @param {Object} user 
+   * @returns Boolean
+   */
+  validateUser(user) {
 
-        if (!user.name || !user.phone || !user.email || !user.country || !user.radio || user.preferences.length === 0) {
-            return false;
-        }
-        return true;
-    }
+      if (!user.name || !user.phone || !user.email || !user.country || !user.radio || user.preferences.length === 0) {
+          return false;
+      }
+      return true;
+  }
 }
