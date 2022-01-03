@@ -1,51 +1,57 @@
 @font-face {
-    font-family: "Montserrat Alternates";
-    src: url("/src/fonts/MontserratAlternates-Regular.ttf");
+  font-family: "Montserrat Alternates";
+  src: url("/src/fonts/MontserratAlternates-Regular.ttf");
 }
 
 @font-face {
-    font-family: Montserrat;
-    src: url("/src/fonts/Montserrat-Regular.ttf");
+  font-family: Montserrat;
+  src: url("/src/fonts/Montserrat-Regular.ttf");
 }
 
-.font__sm {
-    font-family: $font-montserrat-alternates;
-    font-weight: $font-weight-bold;
-    font-size: $font-size-sm;
+%fontSm {
+  font-family: $font-montserrat-alternates;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-sm;
 }
 
 .font__mont-base {
-    font-family: $font-monserrat;
-    font-size: $font-size-base;
-    font-weight: $font-weight-normal;
+  font-family: $font-monserrat;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
 }
 
-.font__mont-xs {
-    font-family: $font-monserrat;
-    font-size: $font-size-xs;
-    font-weight: $font-weight-normal;
+%fontMontBase {
+  font-family: $font-monserrat;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
 }
 
-.font__mont-md {
-    font-family: $font-monserrat;
-    font-size: $font-size-md;
-    font-weight: $font-weight-normal;
+%fontMontXS {
+  font-family: $font-monserrat;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-normal;
 }
 
-.font__mont-alt-base {
-    font-family: $font-montserrat-alternates;
-    font-weight: $font-weight-bold;
-    font-size: $font-size-base;
+%fontMontMD {
+  font-family: $font-monserrat;
+  font-size: $font-size-md;
+  font-weight: $font-weight-normal;
 }
 
-.font__mont-alt-md {
-    font-family: $font-montserrat-alternates;
-    font-weight: $font-weight-bold;
-    font-size: $font-size-md;
+%fontMontAltBase {
+  font-family: $font-montserrat-alternates;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-base;
 }
 
-.font__mont-alt-title {
-    font-family: $font-montserrat-alternates;
-    font-weight: $font-weight-bold;
-    font-size: $font-size-lg;
+%fontMontAltMD {
+  font-family: $font-montserrat-alternates;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-md;
+}
+
+%fontMontAltTitle {
+  font-family: $font-montserrat-alternates;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-lg;
 }

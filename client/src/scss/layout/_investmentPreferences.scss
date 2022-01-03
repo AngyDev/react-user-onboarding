@@ -1,17 +1,19 @@
 .pref {
-    &__row {
-        margin-bottom: 20px;
-        row-gap: 20px;
-        column-gap: 20px;
-    }
+  &__row {
+    margin-bottom: 20px;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
 }
 
 .loading {
-    visibility: hidden;
-    @extend .font__mont-xs;
-    overflow-wrap: break-word;
+  visibility: hidden;
+
+  @extend %fontMontXS;
+
+  overflow-wrap: break-word;
 }
 
 .display {
-    visibility: visible;
+  visibility: visible;
 }

@@ -1,16 +1,20 @@
-.radiobox{
-    border: 1px solid $font-base-color;
-    box-sizing: border-box;
-    border-radius: 4px;
-    padding: 12px 54px 12px 16px;
-    @extend .font__mont-base;
-    margin-right: 20px;
-    &__input {
-        margin-right: 16px;
-    }
-    &:focus-within{
-        border: 1px solid $base-color;
-        color: $base-color;
-        background-color: lighten($base-color, 50%)
-    }
+.radiobox {
+  border: 1px solid $font-base-color;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 12px 54px 12px 16px;
+
+  @extend %fontMontBase;
+
+  margin-right: 20px;
+
+  &__input {
+    margin-right: 16px;
+  }
+
+  &:focus-within {
+    border: 1px solid $base-color;
+    color: $base-color;
+    background-color: lighten($base-color, 50%);
+  }
 }

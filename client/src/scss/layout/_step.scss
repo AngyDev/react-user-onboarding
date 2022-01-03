@@ -1,13 +1,17 @@
 .step {
-    padding-bottom: 46px;
-    &__title {
-        @extend .font__mont-alt-title;
-        padding-bottom: 12px;
-    }
-    &__caption {
-        @extend .font__mont-base;
-        font-weight: $font-weight-normal;
-        color: $font-base-color;
-        line-height: 24px;
-    }
+  padding-bottom: 46px;
+
+  &__title {
+    @extend %fontMontAltTitle;
+
+    padding-bottom: 12px;
+  }
+
+  &__caption {
+    @extend %fontMontBase;
+
+    font-weight: $font-weight-normal;
+    color: $font-base-color;
+    line-height: 24px;
+  }
 }

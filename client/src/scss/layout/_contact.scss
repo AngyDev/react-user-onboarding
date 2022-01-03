@@ -1,17 +1,21 @@
 .contact {
-    &__form {
-        padding-bottom: 56px;
+  &__form {
+    padding-bottom: 56px;
+  }
+
+  &__privacy {
+    .privacy {
+      &__title {
+        @extend .step__title;
+
+        font-size: $font-size-md;
+      }
+
+      &__caption {
+        @extend .step__caption;
+
+        padding-bottom: 12px;
+      }
     }
-    &__privacy {
-        .privacy {
-            &__title {
-                @extend .step__title;
-                font-size: $font-size-md;
-            }
-            &__caption {
-                @extend .step__caption;
-                padding-bottom: 12px;
-            }
-        }
-    }
+  }
 }

@@ -1,43 +1,56 @@
 .quote {
-    margin-bottom: 32px;
-    max-width: 360px;
-    margin-left: 17px;
-    &__container {
-        background: $white;
-        box-shadow: 0px 8px 20px rgba(3, 17, 6, 0.03);
-        border-radius: 4px;
-        position: relative;
-        background: linear-gradient(165deg, rgba(112,185,238,1) 0%, rgba(255,255,255,1) 16%);
+  margin-bottom: 32px;
+  max-width: 360px;
+  margin-left: 17px;
+
+  &__container {
+    box-shadow: 0 8 20px rgb(3 17 6 / 3%);
+    border-radius: 4px;
+    position: relative;
+    background:
+      linear-gradient(
+        165deg,
+        rgb(112 185 238 / 100%) 0%,
+        rgb(255 255 255 / 100%) 16%
+      );
+  }
+
+  &__marks {
+    width: 56px;
+    height: 56px;
+    background: $white;
+    box-shadow: 16px 12px 56px rgb(11 29 46 / 15%);
+    border-radius: 3px;
+    position: absolute;
+    top: -24px;
+    left: -17px;
+  }
+
+  &__content {
+    padding: 48px 40px 32px;
+  }
+
+  &__text {
+    @extend %fontMontBase;
+
+    font-style: italic;
+    color: $quote-text-color;
+    padding-bottom: 20px;
+  }
+
+  .author {
+    &__name {
+      @extend %fontMontAltBase;
+
+      color: $quote-author-name-color;
     }
-    &__marks {
-        width: 56px;
-        height: 56px;
-        background: $white;
-        box-shadow: 16px 12px 56px rgba(11, 29, 46, 0.15);
-        border-radius: 3px;
-        position: absolute;
-        top: -24px;
-        left: -17px;
+
+    &__role {
+      @extend %fontMontBasee;
+
+      color: $quote-text-color;
+      font-size: $font-size-xs;
+      text-transform: uppercase;
     }
-    &__content {
-        padding: 48px 40px 32px 40px;
-    }
-    &__text {
-        @extend .font__mont-base;
-        font-style: italic;
-        color: $quote-text-color;
-        padding-bottom: 20px;
-    }
-    .author {
-        &__name {
-            @extend .font__mont-alt-base;
-            color: $quote-author-name-color;
-        }
-        &__role {
-            @extend .font__mont-base;
-            color: $quote-text-color;
-            font-size: $font-size-xs;
-            text-transform: uppercase;
-        }
-    }
+  }
 }

@@ -1,6 +1,7 @@
-.investment{
-    &__question {
-        @extend .font__mont-alt-md;
-        margin-bottom: 20px;
-    }
+.investment {
+  &__question {
+    @extend %fontMontAltMD;
+
+    margin-bottom: 20px;
+  }
 }

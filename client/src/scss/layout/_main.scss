@@ -1,19 +1,21 @@
 .main {
-    width: 100%;
-    height: 100vh;
-    &__container {
-        height: 100%;
-        padding-left: 40px;
-        padding-right: 40px;
-    }
+  width: 100%;
+  height: 100vh;
+
+  &__container {
+    height: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 @include desktop {
-    .main {
-        width: 70%;
-        &__container {
-            padding-left: 117px;
-            padding-right: 148px;
-        }
+  .main {
+    width: 70%;
+
+    &__container {
+      padding-left: 117px;
+      padding-right: 148px;
     }
+  }
 }

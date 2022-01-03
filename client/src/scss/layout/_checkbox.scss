@@ -1,17 +1,19 @@
 .checkbox {
-    border: 1.5px solid $checkbox-border-color;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 20px rgba(213, 217, 220, 0.05);
-    border-radius: 4px;
-    padding: 16px;
-    width: 136px;
-    height: 148px;
-    &__label {
-        @extend .font__mont-xs;
-    }
-    &:focus-within{
-        border: 1.5px solid $base-color;
-        color: $base-color;
-        background-color:  $checkbox-active-bg-color;
-    }
+  border: 1.5px solid $checkbox-border-color;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px rgb(213 217 220 / 5%);
+  border-radius: 4px;
+  padding: 16px;
+  width: 136px;
+  height: 148px;
+
+  &__label {
+    @extend %fontMontXS;
+  }
+
+  &:focus-within {
+    border: 1.5px solid $base-color;
+    color: $base-color;
+    background-color: $checkbox-active-bg-color;
+  }
 }

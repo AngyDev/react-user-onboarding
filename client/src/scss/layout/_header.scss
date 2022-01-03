@@ -1,16 +1,19 @@
 .header {
-    @extend .font__mont-base;
-    color: $font-base-color;
+  @extend %fontMontBase;
+
+  color: $font-base-color;
 }
 
 .select {
-    width: 100%;
-    height: 32px;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid $form-elem-bg-color;
-    @extend .font__mont-base;
-    &:focus {
-        border-bottom: 1px solid $form-elem-focus-bg-color;
-    }
+  width: 100%;
+  height: 32px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid $form-elem-bg-color;
+
+  @extend %fontMontBase;
+
+  &:focus {
+    border-bottom: 1px solid $form-elem-focus-bg-color;
+  }
 }
