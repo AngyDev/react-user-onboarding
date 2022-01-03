@@ -1,4 +1,12 @@
 {
   "extends": "stylelint-config-standard-scss",
-  "css.lint.unknownAtRules": "ignore"
+  "css.lint.unknownAtRules": "ignore",
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["include", "mixin", "extend"]
+      }
+    ]
+  }
 }
