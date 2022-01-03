@@ -39,3 +39,27 @@ jobs:
       - name: Run the tests
         run: npm test -- --coverage
         working-directory: ${{env.working-directory}}
+  job2:
+    runs-on: ubuntu-latest
+    env:
+      working-directory: ./server
+
+    strategy:
+      matrix: 
+        node-version: [14.x, 16.x]
+    
+    steps:
+      - name: Checkout code 
+        uses: actions/checkout@v2
+      
+      - name: Cache path
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: ${{env.working-directory}}
